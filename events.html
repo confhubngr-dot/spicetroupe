@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Packages &amp; prices &#8212; Spice Troupe</title>
+<meta name="description" content="Dance performances for traditional weddings, corporate events, festivals, cultural days and schools across Nigeria, with guide prices.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 20'%3E%3Cellipse cx='8' cy='6.5' rx='5.2' ry='6.5' fill='%23F2A413'/%3E%3Cellipse cx='8' cy='16.4' rx='3.6' ry='3.4' fill='%23E24A72'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Spice Troupe — house styles
+   Palette: aubergine + orchid mist, with eight style hues used
+   ONLY to colour-code the dance traditions.
+   ============================================================ */
+
+:root{
+  --aubergine:#2B0F33;
+  --plum:#4A2454;
+  --mist:#F4EEF6;
+  --paper:#FFFFFF;
+  --muted:#6D5A75;
+  --muted-dark:#C7ADCF;
+  --line:#E4D8E8;
+  --line-dark:#5A3364;
+
+  /* the eight traditions */
+  --marigold:#F2A413;
+  --coral:#E24A72;
+  --cyan:#0F93B8;
+  --chilli:#D33B2E;
+  --violet:#8A44AC;
+  --jade:#0F8A78;
+  --indigo:#4A55D8;
+  --orchid:#B361C9;
+
+  --max:1180px;
+  --r:14px;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Karla","Helvetica Neue",Arial,sans-serif;
+  --mono:"DM Mono","SFMono-Regular",Consolas,monospace;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--mist);
+  color:var(--aubergine);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%;display:block}
+
+a{color:inherit}
+
+.skip{
+  position:absolute;left:-9999px;top:0;background:var(--aubergine);color:var(--mist);
+  padding:.7rem 1.1rem;z-index:200;border-radius:0 0 10px 0;font-family:var(--mono);font-size:.8rem;
+}
+.skip:focus{left:0}
+
+:focus-visible{outline:3px solid var(--marigold);outline-offset:3px;border-radius:4px}
+
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ---------- type ---------- */
+
+h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1.02;letter-spacing:-.025em;margin:0}
+
+h1{font-size:clamp(2.7rem,7.4vw,5.4rem)}
+h2{font-size:clamp(2rem,4.3vw,3.2rem)}
+h3{font-size:clamp(1.25rem,2vw,1.6rem);letter-spacing:-.015em}
+h4{font-size:1.05rem;letter-spacing:-.01em}
+
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 1.1rem;display:flex;align-items:center;gap:.7rem;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor;flex:none}
+.on-dark .eyebrow{color:var(--muted-dark)}
+
+.lede{font-size:clamp(1.1rem,1.7vw,1.32rem);line-height:1.55;color:var(--muted);max-width:56ch}
+.on-dark .lede{color:var(--muted-dark)}
+
+.spec{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--muted)}
+
+/* ---------- header ---------- */
+
+.masthead{
+  position:sticky;top:0;z-index:100;background:var(--aubergine);color:var(--mist);
+  border-bottom:1px solid var(--line-dark);
+}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px}
+
+.logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;font-family:var(--display);
+  font-weight:800;font-size:1.12rem;letter-spacing:-.02em;color:var(--mist);flex:none}
+.logo svg{width:22px;height:26px;flex:none}
+.logo span small{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--muted-dark);font-weight:400;margin-top:2px}
+
+.nav{display:flex;align-items:center;gap:.35rem}
+.nav a{
+  text-decoration:none;font-size:.93rem;padding:.5rem .78rem;border-radius:8px;
+  color:var(--mist);opacity:.78;transition:opacity .15s,background .15s;white-space:nowrap;
+}
+.nav a:hover{opacity:1;background:rgba(255,255,255,.09)}
+.nav a[aria-current="page"]{opacity:1;background:rgba(255,255,255,.13)}
+.nav .book{background:var(--marigold);color:var(--aubergine);opacity:1;font-weight:700;margin-left:.4rem}
+.nav .book:hover{background:#ffb62e}
+
+.menu-btn{display:none;background:none;border:1px solid var(--line-dark);color:var(--mist);
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.55rem .8rem;border-radius:8px;cursor:pointer}
+
+/* ---------- sections ---------- */
+
+.section{padding:88px 0}
+.section--tight{padding:60px 0}
+.section--dark{background:var(--aubergine);color:var(--mist)}
+.section--plum{background:var(--plum);color:var(--mist)}
+.section-head{max-width:62ch;margin-bottom:52px}
+
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- buttons ---------- */
+
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;cursor:pointer;
+  font-family:var(--body);font-weight:700;font-size:.97rem;padding:.85rem 1.5rem;
+  border-radius:999px;border:2px solid transparent;transition:transform .12s,background .15s,color .15s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn--primary{background:var(--marigold);color:var(--aubergine)}
+.btn--primary:hover{background:#ffb62e}
+.btn--ghost{border-color:currentColor;background:transparent;color:inherit}
+.btn--ghost:hover{background:rgba(255,255,255,.1)}
+.on-light .btn--ghost:hover{background:rgba(43,15,51,.07)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+
+/* ---------- hero + footprint trail (signature) ---------- */
+
+.hero{background:var(--aubergine);color:var(--mist);position:relative;overflow:hidden;
+  padding:96px 0 0}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{max-width:15ch}
+.hero .lede{margin-top:1.6rem}
+.hero-foot{margin-top:56px;padding-bottom:0}
+
+.trail{display:block;width:100%;height:auto;margin-top:44px}
+.trail .step{opacity:0;transform-box:fill-box;transform-origin:center}
+.trail.go .step{animation:printOn .5s cubic-bezier(.2,.8,.3,1) forwards}
+@keyframes printOn{
+  from{opacity:0;transform:translateY(9px) scale(.86)}
+  to{opacity:1;transform:none}
+}
+
+/* ---------- the eight traditions: ribbon ---------- */
+
+.ribbon{display:grid;grid-template-columns:repeat(8,1fr);border-top:1px solid var(--line-dark)}
+.ribbon a{
+  text-decoration:none;color:var(--mist);padding:18px 14px 20px;display:block;
+  border-right:1px solid var(--line-dark);position:relative;transition:background .18s;
+}
+.ribbon a:last-child{border-right:0}
+.ribbon a:hover{background:rgba(255,255,255,.06)}
+.ribbon i{display:block;height:5px;border-radius:3px;background:var(--hue);margin-bottom:12px;
+  transition:height .18s}
+.ribbon a:hover i{height:11px}
+.ribbon b{font-family:var(--display);font-weight:700;font-size:.9rem;letter-spacing:-.01em;
+  display:block;line-height:1.25}
+
+/* ---------- style cards ---------- */
+
+.grid{display:grid;gap:22px}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px 26px 28px;position:relative;overflow:hidden;
+}
+.card--style{padding-top:30px}
+.card--style::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--hue)}
+.card--style{scroll-margin-top:100px}
+.card h3{margin-bottom:.35rem}
+.card .origin{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--hue,var(--muted));margin-bottom:1rem;font-weight:500}
+.card p{color:var(--muted);font-size:.96rem}
+.card dl{display:flex;flex-wrap:wrap;gap:0 26px;margin:1.2rem 0 0;padding-top:1rem;
+  border-top:1px solid var(--line)}
+.card dt{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:2px}
+.card dd{margin:0 0 .5rem;font-weight:700;font-size:.92rem}
+
+/* ---------- numbered steps (a real sequence) ---------- */
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:s}
+.step-item{padding-top:20px;border-top:2px solid var(--line-dark)}
+.on-light .step-item{border-top-color:var(--line)}
+.step-item .n{display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.step-item .n span{font-family:var(--mono);font-size:.8rem;letter-spacing:.1em;color:var(--marigold)}
+.step-item .n svg{width:15px;height:19px;opacity:.85}
+.step-item h4{margin-bottom:.5rem}
+.step-item p{font-size:.94rem;color:var(--muted-dark)}
+.on-light .step-item p{color:var(--muted)}
+
+/* ---------- lists ---------- */
+
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
+.ticks li{display:flex;gap:.8rem;align-items:flex-start;font-size:.98rem}
+.ticks li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--marigold);
+  margin-top:.5rem;flex:none}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.split--narrow{grid-template-columns:.85fr 1.15fr}
+
+/* ---------- quotes ---------- */
+
+.quote{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.quote blockquote{margin:0;font-family:var(--display);font-weight:600;font-size:1.22rem;
+  line-height:1.32;letter-spacing:-.018em}
+.quote figcaption{margin-top:1.1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted)}
+
+/* ---------- gallery ---------- */
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gal figure{margin:0}
+.tile{
+  aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;
+  background:linear-gradient(150deg,var(--hue) 0%,var(--aubergine) 118%);
+  display:flex;align-items:flex-end;padding:22px;
+}
+.tile--wide{aspect-ratio:16/10}
+.tile span{font-family:var(--display);font-weight:800;font-size:1.15rem;color:#fff;
+  letter-spacing:-.02em;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.3)}
+.tile::after{
+  content:"Photo slot";position:absolute;top:14px;left:14px;font-family:var(--mono);
+  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);
+  border:1px solid rgba(255,255,255,.4);padding:3px 7px;border-radius:20px;
+}
+.gal figcaption{font-size:.88rem;color:var(--muted);margin-top:.7rem}
+
+/* instagram embeds */
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.ig-grid .instagram-media{min-width:0!important;width:100%!important;margin:0!important;
+  border-radius:var(--r)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+.ig-empty{border:1px dashed var(--line);border-radius:var(--r);padding:26px;background:var(--paper)}
+.ig-empty p{font-size:.9rem;color:var(--muted)}
+.ig-empty .spec{display:block;margin-top:.8rem;word-break:break-all;color:var(--indigo)}
+@media (max-width:1000px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:720px){.ig-grid{grid-template-columns:1fr}}
+
+/* ---------- form ---------- */
+
+.form{display:grid;gap:18px}
+.field{display:grid;gap:.4rem}
+.field label{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted)}
+.field input,.field select,.field textarea{
+  font-family:var(--body);font-size:1rem;color:var(--aubergine);background:var(--paper);
+  border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem;width:100%;
+}
+.field textarea{min-height:150px;resize:vertical}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-note{font-size:.86rem;color:var(--muted)}
+code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px solid var(--line);
+  border-radius:5px;padding:.1em .35em}
+
+/* ---------- contact details ---------- */
+
+.detail-list{margin:0}
+.detail{padding:18px 0;border-bottom:1px solid var(--line)}
+.detail:first-child{padding-top:0}
+.detail dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.3rem}
+.detail dd{margin:0;font-size:1.05rem;font-weight:700}
+.detail dd a{text-decoration:none;border-bottom:2px solid var(--marigold)}
+
+/* ---------- faq ---------- */
+
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.faq summary{font-family:var(--display);font-weight:700;font-size:1.08rem;cursor:pointer;
+  letter-spacing:-.015em;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--marigold);font-size:1.3rem;
+  line-height:1;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:.9rem;color:var(--muted);font-size:.97rem;max-width:70ch}
+
+/* ---------- partners strip ---------- */
+
+.partners{background:var(--paper);border-top:1px solid var(--line);padding:46px 0}
+.partners .eyebrow{margin-bottom:24px}
+.partner-row{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+}
+.partner{
+  background:var(--paper);padding:22px 18px;text-decoration:none;display:flex;
+  flex-direction:column;justify-content:center;gap:.4rem;min-height:96px;
+  filter:grayscale(1);opacity:.6;transition:opacity .18s,filter .18s;
+}
+.partner:hover,.partner:focus-visible{opacity:1;filter:none}
+.partner img{height:28px;width:auto;max-width:100%;object-fit:contain;object-position:left}
+.partner b{font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:-.015em;
+  line-height:1.15}
+.partner span{font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted)}
+.partners .form-note{margin-top:18px}
+
+@media (max-width:1000px){.partner-row{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:720px){.partner-row{grid-template-columns:repeat(2,1fr)}
+  .partners{padding:38px 0}}
+
+/* ---------- cta band ---------- */
+
+.band{background:var(--marigold);color:var(--aubergine);padding:72px 0}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap}
+.band h2{max-width:16ch}
+.band p{max-width:44ch;margin-top:.9rem;font-size:1.05rem}
+.band .btn--primary{background:var(--aubergine);color:var(--mist)}
+.band .btn--primary:hover{background:#3d1848}
+
+/* ---------- footer ---------- */
+
+.foot{background:var(--aubergine);color:var(--mist);padding:64px 0 32px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px}
+.foot h4{margin-bottom:1rem;font-size:.95rem}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.foot a{color:var(--muted-dark);text-decoration:none;font-size:.94rem}
+.foot a:hover{color:var(--mist)}
+.foot p{color:var(--muted-dark);font-size:.94rem;max-width:38ch}
+.foot-base{margin-top:48px;padding-top:22px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted-dark)}
+
+/* ---------- origin timeline ---------- */
+
+.timeline{border-top:1px solid var(--line)}
+.on-dark .timeline{border-top-color:var(--line-dark)}
+.tl-item{display:grid;grid-template-columns:130px 1fr;gap:34px;padding:30px 0;
+  border-bottom:1px solid var(--line);align-items:start}
+.on-dark .tl-item{border-bottom-color:var(--line-dark)}
+.tl-year{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;color:var(--muted);
+  display:flex;align-items:center;gap:.7rem;padding-top:.3rem}
+.on-dark .tl-year{color:var(--muted-dark)}
+.tl-year::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--hue);flex:none}
+.tl-item h4{font-size:1.18rem;margin-bottom:.5rem}
+.tl-item p{color:var(--muted);font-size:.98rem;max-width:64ch}
+.on-dark .tl-item p{color:var(--muted-dark)}
+
+.pull{border-left:4px solid var(--marigold);padding:6px 0 6px 26px;margin:8px 0}
+.pull blockquote{margin:0;font-family:var(--display);font-weight:600;letter-spacing:-.02em;
+  font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.25}
+.pull figcaption{margin-top:1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted)}
+.on-dark .pull figcaption{color:var(--muted-dark)}
+
+.prose p{font-size:1.06rem;line-height:1.68;max-width:66ch}
+.prose p+p{margin-top:1.1em}
+
+@media (max-width:720px){
+  .tl-item{grid-template-columns:1fr;gap:10px;padding:24px 0}
+}
+
+/* ---------- track record log ---------- */
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:40px}
+.stat{border-top:2px solid var(--line-dark);padding-top:18px}
+.on-light .stat{border-top-color:var(--line)}
+.stat b{display:block;font-family:var(--display);font-weight:800;letter-spacing:-.03em;
+  font-size:clamp(2.1rem,3.8vw,3rem);line-height:1;margin-bottom:.55rem}
+.stat span{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted-dark)}
+.on-light .stat span{color:var(--muted)}
+
+.year{display:flex;align-items:baseline;gap:1rem;margin:56px 0 4px}
+.year:first-of-type{margin-top:0}
+.year h3{font-size:clamp(1.6rem,3vw,2.2rem)}
+.year .count{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted)}
+.year::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.log{border-top:1px solid var(--line)}
+.log-row{
+  display:grid;grid-template-columns:98px 1.5fr 1.2fr 1.05fr 86px;gap:22px;
+  padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.log-row .when{font-family:var(--mono);font-size:.76rem;letter-spacing:.04em;color:var(--muted);
+  white-space:nowrap}
+.log-row .what{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.015em}
+.log-row .where{font-size:.93rem;color:var(--muted)}
+.log-row .chip{display:inline-flex;align-items:center;gap:.55rem;font-size:.9rem}
+.log-row .chip::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--hue);
+  flex:none}
+.log-row .scale{font-family:var(--mono);font-size:.76rem;color:var(--muted);text-align:right;
+  white-space:nowrap}
+
+/* ---------- whatsapp chat button ---------- */
+
+.wa{
+  position:fixed;right:22px;bottom:22px;z-index:90;
+  width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#25D366;color:#fff;text-decoration:none;
+  box-shadow:0 6px 20px rgba(43,15,51,.28);
+  transition:transform .18s cubic-bezier(.2,.8,.3,1),box-shadow .18s;
+}
+.wa svg{width:31px;height:31px;fill:currentColor}
+.wa:hover,.wa:focus-visible{transform:scale(1.07);box-shadow:0 10px 26px rgba(43,15,51,.34)}
+
+.wa-label{
+  position:absolute;right:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(6px);
+  background:var(--aubergine);color:var(--mist);white-space:nowrap;
+  font-family:var(--body);font-weight:700;font-size:.86rem;
+  padding:.5rem .85rem;border-radius:999px;opacity:0;pointer-events:none;
+  transition:opacity .18s,transform .18s;
+}
+.wa:hover .wa-label,.wa:focus-visible .wa-label{opacity:1;transform:translateY(-50%) translateX(0)}
+
+/* one short nudge on load, then it leaves you alone */
+.wa::after{
+  content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;
+  animation:waRing 1.9s ease-out 1.2s 2;
+}
+@keyframes waRing{
+  0%{opacity:.7;transform:scale(1)}
+  100%{opacity:0;transform:scale(1.65)}
+}
+
+@media (max-width:720px){
+  .wa{width:54px;height:54px;right:16px;bottom:16px}
+  .wa svg{width:28px;height:28px}
+  .wa-label{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .wa::after{display:none}
+}
+
+@media print{.wa{display:none}}
+
+/* ---------- reveal ---------- */
+
+.rise{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.3,1)}
+.rise.seen{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+
+@media (max-width:1000px){
+  .grid--4{grid-template-columns:repeat(2,1fr)}
+  .grid--3{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .split,.split--narrow{grid-template-columns:1fr;gap:40px}
+  .ribbon{grid-template-columns:repeat(4,1fr)}
+  .ribbon a:nth-child(4){border-right:0}
+  .ribbon a:nth-child(-n+4){border-bottom:1px solid var(--line-dark)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:1040px){
+  .menu-btn{display:block}
+  .nav{
+    display:none;position:absolute;top:72px;left:0;right:0;background:var(--aubergine);
+    flex-direction:column;align-items:stretch;padding:12px 24px 22px;gap:.2rem;
+    border-bottom:1px solid var(--line-dark);
+  }
+  .nav.open{display:flex}
+  .nav a{padding:.7rem .5rem;font-size:1rem}
+  .nav .book{margin:.6rem 0 0;justify-content:center;display:flex}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .log-row{grid-template-columns:92px 1.4fr 1.1fr;row-gap:6px}
+  .log-row .chip{grid-column:2}
+  .log-row .scale{grid-column:3;text-align:left}
+}
+
+@media (max-width:720px){
+  body{font-size:16px}
+  .section{padding:64px 0}
+  .hero{padding-top:64px}
+  .stats{grid-template-columns:1fr 1fr}
+  .log-row{grid-template-columns:1fr;row-gap:4px;padding:20px 0}
+  .log-row .scale{text-align:left}
+  .grid--2,.grid--3,.grid--4,.steps,.pair,.gal{grid-template-columns:1fr}
+  .ribbon{grid-template-columns:repeat(2,1fr)}
+  .ribbon a{border-bottom:1px solid var(--line-dark)}
+  .ribbon a:nth-child(2n){border-right:0}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+  .band{padding:56px 0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .rise{opacity:1;transform:none}
+  .trail .step{opacity:1}
+}
+
+@media print{.masthead,.band,.foot{display:none}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 16 20" aria-hidden="true"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5" fill="#F2A413"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4" fill="#E24A72"/></svg>
+      <span>Spice Troupe<small>Cultural dance group &#183; Lagos</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="styles.html">Dance styles</a>
+        <a href="events.html" aria-current="page">Packages</a>
+        <a href="past-events.html">Past events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">Our story</a>
+        <a href="contact.html">Contact</a>
+        <a class="book" href="contact.html">Check a date</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="section section--dark on-dark section--tight">
+  <div class="wrap">
+    <p class="eyebrow">Where we perform</p>
+    <h1 style="font-size:clamp(2.4rem,5.5vw,4rem)">Packages &amp; event types</h1>
+    <p class="lede" style="margin-top:1.4rem">The same dancers, arranged differently depending on whether the room is seated, standing, indoors, outdoors or moving.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Event types</p>
+      <h2>Six kinds of day we know well.</h2>
+    </div>
+    <div class="grid grid--3">
+      <article class="card rise"><h3>Traditional weddings</h3><p>An entrance for the couple, a set matched to both families&#8217; traditions, and a section that brings guests onto the floor. We work with your planner directly on timings.</p></article>
+      <article class="card rise"><h3>White weddings &amp; receptions</h3><p>A shorter, tighter set after the meal, then a first dance if you&#8217;ve commissioned one. Fits venues where the floor is smaller than the guest list suggests.</p></article>
+      <article class="card rise"><h3>Corporate &amp; product launches</h3><p>Opening numbers, interval sets and stage-managed entrances. We liaise with your AV supplier and can supply a technical rider.</p></article>
+      <article class="card rise"><h3>Festivals &amp; carnivals</h3><p>Repeat sets across a day, outdoor stages and parade routes. Priced by the day rather than by the set.</p></article>
+      <article class="card rise"><h3>Cultural days &amp; receptions</h3><p>State cultural events, embassy evenings, association galas and diaspora functions. Tell us which traditions the room will want to see and we&#8217;ll build to that.</p></article>
+      <article class="card rise"><h3>Schools &amp; youth programmes</h3><p>Assembly performances and workshops for up to 60 pupils at a time, with a scheme of work you can keep.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark on-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Packages</p>
+      <h2>Three shapes, then we adjust.</h2>
+      <p class="lede" style="margin-top:1.2rem">Guide prices for a weekend booking within Lagos. Weekdays cost less; travel outside the state, early call times, live drummers and extra dancers cost more. Everything is confirmed in writing before you pay anything.</p>
+    </div>
+    <div class="grid grid--3">
+      <article class="card card--style" style="--hue:var(--marigold)">
+        <p class="origin" style="--hue:var(--marigold)">Package 01</p>
+        <h3>Showcase set</h3>
+        <p>One tradition, choreographed and costumed, performed once.</p>
+        <dl><div><dt>Length</dt><dd>10&#8211;15 min</dd></div><div><dt>Dancers</dt><dd>4&#8211;6</dd></div><div><dt>From</dt><dd>&#8358;350,000</dd></div></dl>
+      </article>
+      <article class="card card--style" style="--hue:var(--coral)">
+        <p class="origin" style="--hue:var(--coral)">Package 02</p>
+        <h3>Show &amp; teach</h3>
+        <p>A showcase set, then a taught section that brings guests onto the floor.</p>
+        <dl><div><dt>Length</dt><dd>35&#8211;45 min</dd></div><div><dt>Dancers</dt><dd>6&#8211;8</dd></div><div><dt>From</dt><dd>&#8358;650,000</dd></div></dl>
+      </article>
+      <article class="card card--style" style="--hue:var(--cyan)">
+        <p class="origin" style="--hue:var(--cyan)">Package 03</p>
+        <h3>Full evening</h3>
+        <p>Three appearances across the night, moving through two or three traditions, with a costume change between each.</p>
+        <dl><div><dt>Length</dt><dd>3 &#215; 15 min</dd></div><div><dt>Dancers</dt><dd>8&#8211;14</dd></div><div><dt>From</dt><dd>&#8358;1,500,000</dd></div></dl>
+      </article>
+    </div>
+    <p class="spec" style="color:var(--muted-dark);margin-top:2rem">Bookings outside Lagos are quoted with transport and accommodation for the company. Detty December dates and carnival season are priced separately &#8212; ask early.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Add-ons</p>
+        <h2>Things people ask for once they&#8217;ve booked.</h2>
+      </div>
+      <div>
+        <ul class="ticks">
+          <li><strong>Live drummers</strong> &#8212; b&#225;t&#225; or ogene ensemble rather than a recorded track</li>
+          <li><strong>Parade entrance</strong> &#8212; dancers lead the couple or guests in, in full costume</li>
+          <li><strong>Guest workshop</strong> &#8212; 30 minutes, up to 40 people, no experience needed</li>
+          <li><strong>Filmed set</strong> &#8212; a videographer we work with, edited and sent within a fortnight</li>
+          <li><strong>Costume for the couple</strong> &#8212; sourced and fitted for the entrance or first dance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap faq">
+    <div class="section-head"><p class="eyebrow">Practical</p><h2>Questions we get every week.</h2></div>
+    <details><summary>How far in advance should we book?</summary><p>December and the carnival season fill up by August. The rest of the year, three to six weeks is usually enough, and we can sometimes take a date with a fortnight&#8217;s notice. Commissioned pieces need six weeks whatever the date.</p></details>
+    <details><summary>What happens if it rains?</summary><p>Outdoor sets need a dry, level surface. If it&#8217;s wet we move indoors or shorten to the styles that are safe on what&#8217;s available &#8212; we won&#8217;t cancel on you, and we won&#8217;t dance on a floor where someone will get hurt.</p></details>
+    <details><summary>Do you travel outside Lagos?</summary><p>Yes, anywhere in the country. Transport and accommodation for the company are added to the quote, and for far dates we usually travel the day before rather than risk the road on the morning of your event.</p></details>
+    <details><summary>Do you need a stage?</summary><p>No. A cleared floor of 5m &#215; 4m is enough for most sets. Send the dimensions or a photo and we&#8217;ll tell you honestly what fits.</p></details>
+    <details><summary>Can we choose the music?</summary><p>Yes, within reason. Send tracks at least three weeks ahead so the choreography can be rebuilt around them. The traditional sets have their own music and drumming, which we won&#8217;t swap for a recording.</p></details>
+  </div>
+</section>
+
+</main>
+
+<section class="band">
+  <div class="wrap">
+    <div>
+      <h2>Tell us the date and we&#8217;ll tell you what fits.</h2>
+      <p>Send the venue, the time of day and the kind of crowd. You&#8217;ll get a reply with two or three options and a price the same day.</p>
+    </div>
+    <a class="btn btn--primary" href="contact.html">Check a date</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Spice Troupe</h4>
+        <p>A cultural dance group based in Lagos, performing traditional and contemporary Nigerian dance at weddings, corporate events, festivals and cultural celebrations nationwide.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="styles.html">Dance styles</a></li>
+          <li><a href="events.html">Packages &amp; prices</a></li>
+          <li><a href="past-events.html">Past events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">Our story</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="https://wa.me/2348138067502?text=Hi%20Spice%20Troupe%2C%20I%27d%20like%20to%20check%20a%20date%20for%20an%20event." target="_blank" rel="noopener">WhatsApp +234 813 806 7502</a></li>
+          <li><a href="tel:+2348138067502">+234 813 806 7502</a></li>
+          <li><a href="mailto:hello@spicetroupe.ng">hello@spicetroupe.ng</a></li>
+          <li><a href="https://www.instagram.com/spicetroupe/" rel="noopener">Instagram &#64;spicetroupe</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&#169; 2026 Spice Troupe &#183; Lagos, Nigeria</span>
+      <span>Available nationwide</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/2348138067502?text=Hi%20Spice%20Troupe%2C%20I%27d%20like%20to%20check%20a%20date%20for%20an%20event." target="_blank" rel="noopener" aria-label="Message Spice Troupe on WhatsApp"><span class="wa-label">Chat on WhatsApp</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn'), nav = document.getElementById('nav');
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    btn.textContent = open ? 'Close' : 'Menu';
+  });
+
+  var trail = document.querySelector('.trail');
+  if (trail) { requestAnimationFrame(function(){ trail.classList.add('go'); }); }
+
+  var items = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('seen'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); }
+      });
+    }, {rootMargin: '0px 0px -60px 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
