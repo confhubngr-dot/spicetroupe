@@ -153,6 +153,36 @@ p:last-child{margin-bottom:0}
 .hero{background:var(--aubergine);color:var(--mist);position:relative;overflow:hidden;
   padding:96px 0 0}
 .hero .wrap{position:relative;z-index:2}
+
+/* video background. Falls back to the poster image, then to flat aubergine. */
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-media video,.hero-media img{
+  width:100%;height:100%;object-fit:cover;object-position:center 35%;
+  display:block;filter:saturate(1.05)
+}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(43,15,51,.86) 0%,rgba(43,15,51,.7) 45%,rgba(43,15,51,.95) 100%);
+}
+.hero--video .trail{opacity:.92}
+
+.hero-sound{
+  position:absolute;right:24px;bottom:24px;z-index:3;
+  display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;
+  background:rgba(43,15,51,.55);border:1px solid rgba(255,255,255,.3);color:var(--mist);
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.55rem .9rem;border-radius:999px;backdrop-filter:blur(6px);
+}
+.hero-sound:hover{background:rgba(43,15,51,.8)}
+
+@media (max-width:720px){
+  .hero-media video{display:none}      /* poster only on mobile, saves data */
+  .hero-sound{right:16px;bottom:16px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-media video{display:none}
+}
 .hero h1{max-width:15ch}
 .hero .lede{margin-top:1.6rem}
 .hero-foot{margin-top:56px;padding-bottom:0}
@@ -167,7 +197,7 @@ p:last-child{margin-bottom:0}
 
 /* ---------- the eight traditions: ribbon ---------- */
 
-.ribbon{display:grid;grid-template-columns:repeat(8,1fr);border-top:1px solid var(--line-dark)}
+.ribbon{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line-dark)}
 .ribbon a{
   text-decoration:none;color:var(--mist);padding:18px 14px 20px;display:block;
   border-right:1px solid var(--line-dark);position:relative;transition:background .18s;
@@ -347,20 +377,115 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted-dark)}
 
-/* ---------- origin timeline ---------- */
+/* ---------- package price breakdown ---------- */
 
-.timeline{border-top:1px solid var(--line)}
-.on-dark .timeline{border-top-color:var(--line-dark)}
-.tl-item{display:grid;grid-template-columns:130px 1fr;gap:34px;padding:30px 0;
-  border-bottom:1px solid var(--line);align-items:start}
-.on-dark .tl-item{border-bottom-color:var(--line-dark)}
-.tl-year{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;color:var(--muted);
-  display:flex;align-items:center;gap:.7rem;padding-top:.3rem}
-.on-dark .tl-year{color:var(--muted-dark)}
-.tl-year::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--hue);flex:none}
-.tl-item h4{font-size:1.18rem;margin-bottom:.5rem}
-.tl-item p{color:var(--muted);font-size:.98rem;max-width:64ch}
-.on-dark .tl-item p{color:var(--muted-dark)}
+.pkg{display:flex;flex-direction:column}
+.pkg .lineup{margin:0 0 1.2rem;padding:0;list-style:none;display:grid;gap:.34rem}
+
+/* what each option performs — the actual difference between the three */
+.perf{margin:0 0 1.3rem;padding:0;list-style:none;display:grid;gap:.6rem}
+.perf li{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;line-height:1.4}
+.perf li::before{
+  content:"";width:17px;height:17px;border-radius:50%;flex:none;margin-top:.14rem;
+  background:var(--hue);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%23000'/%3E%3C/svg%3E") center/13px no-repeat,linear-gradient(#000,#000);
+  -webkit-mask-composite:xor;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%23000'/%3E%3C/svg%3E") center/13px no-repeat,linear-gradient(#000,#000);
+  mask-composite:exclude;
+}
+.perf li strong{font-weight:700}
+.perf li em{font-style:normal;color:var(--muted);font-size:.89rem;display:block;margin-top:.1rem}
+.perf li.off{color:var(--muted);opacity:.55}
+.perf li.off::before{
+  background:var(--muted);
+  -webkit-mask:none;mask:none;
+  border-radius:50%;height:2px;width:11px;margin-top:.62rem;margin-left:3px;margin-right:3px;
+}
+.pkg .lineup li{font-size:.92rem;color:var(--muted);display:flex;gap:.55rem;align-items:baseline}
+.pkg .lineup li b{font-family:var(--mono);font-size:.8rem;color:var(--hue);font-weight:500;
+  min-width:1.6rem;flex:none}
+
+.price-lines{margin:auto 0 0;padding-top:1.1rem;border-top:1px solid var(--line)}
+.price-line{display:flex;justify-content:space-between;gap:1rem;padding:.34rem 0;font-size:.93rem}
+.price-line span:first-child{color:var(--muted)}
+.price-line span:last-child{font-family:var(--mono);font-size:.86rem;white-space:nowrap}
+.price-line--total{margin-top:.5rem;padding-top:.7rem;border-top:1px solid var(--line);
+  font-weight:700}
+.price-line--total span:first-child{color:var(--aubergine)}
+.price-line--total span:last-child{font-family:var(--display);font-size:1.15rem;font-weight:800;
+  letter-spacing:-.02em}
+
+.pkg-for{font-size:.86rem;color:var(--muted);font-style:italic;margin:-.4rem 0 1.2rem}
+.pkg-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 .6rem;padding-top:1rem;border-top:1px solid var(--line)}
+
+/* ---------- terms ---------- */
+
+.terms{counter-reset:tm;display:grid;gap:1.05rem;margin:0;padding:0;list-style:none}
+.terms li{display:flex;gap:1rem;font-size:.95rem;color:var(--muted-dark);align-items:flex-start}
+.on-light .terms li{color:var(--muted)}
+.terms li::before{
+  counter-increment:tm;content:counter(tm,decimal-leading-zero);
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--marigold);
+  flex:none;padding-top:.22rem;
+}
+
+/* ---------- add-on price rows ---------- */
+
+.addons{border-top:1px solid var(--line)}
+.addon{
+  display:flex;gap:24px;align-items:baseline;justify-content:space-between;
+  padding:20px 0;border-bottom:1px solid var(--line);
+}
+.addon h4{font-size:1.03rem;margin-bottom:.25rem}
+.addon p{font-size:.92rem;color:var(--muted);max-width:58ch}
+.addon-price{
+  font-family:var(--mono);font-size:.86rem;letter-spacing:.02em;white-space:nowrap;
+  color:var(--aubergine);font-weight:500;flex:none;
+}
+@media (max-width:720px){
+  .addon{flex-direction:column;gap:8px}
+  .addon-price{color:var(--muted)}
+}
+
+/* ---------- roster of performer types ---------- */
+
+.roster{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.roster li{
+  font-family:var(--body);font-size:.94rem;font-weight:500;
+  border:1px solid var(--line);border-radius:999px;padding:.5rem 1.05rem;background:var(--paper);
+}
+.on-dark .roster li{border-color:var(--line-dark);background:rgba(255,255,255,.05)}
+
+/* ---------- trusted-by logo strip ---------- */
+
+.marquee{overflow:hidden;position:relative;padding:8px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.marquee-track{display:flex;gap:20px;width:max-content;animation:slide 42s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.logo-cell{
+  flex:none;width:206px;height:120px;border-radius:14px;
+  border:1px solid var(--line);background:var(--paper);
+  display:flex;align-items:center;justify-content:center;padding:14px 22px;
+}
+.on-dark .logo-cell{border-color:var(--line-dark);background:rgba(255,255,255,.94)}
+.logo-cell img{
+  max-height:100%;max-width:100%;width:auto;object-fit:contain;
+  filter:grayscale(1);opacity:.62;transition:filter .25s,opacity .25s;
+}
+.marquee:hover .logo-cell img,.logo-cell:hover img{filter:none;opacity:1}
+.logo-cell span{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);text-align:center;line-height:1.5}
+.on-dark .logo-cell span{color:var(--muted-dark)}
+
+@media (prefers-reduced-motion:reduce){
+  .marquee-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
+}
+
+/* ---------- pull quote ---------- */
 
 .pull{border-left:4px solid var(--marigold);padding:6px 0 6px 26px;margin:8px 0}
 .pull blockquote{margin:0;font-family:var(--display);font-weight:600;letter-spacing:-.02em;
@@ -373,7 +498,6 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 .prose p+p{margin-top:1.1em}
 
 @media (max-width:720px){
-  .tl-item{grid-template-columns:1fr;gap:10px;padding:24px 0}
 }
 
 /* ---------- track record log ---------- */
@@ -465,9 +589,9 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   .grid--3{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr)}
   .split,.split--narrow{grid-template-columns:1fr;gap:40px}
-  .ribbon{grid-template-columns:repeat(4,1fr)}
-  .ribbon a:nth-child(4){border-right:0}
-  .ribbon a:nth-child(-n+4){border-bottom:1px solid var(--line-dark)}
+  .ribbon{grid-template-columns:repeat(3,1fr)}
+  .ribbon a:nth-child(3n){border-right:0}
+  .ribbon a:nth-child(-n+3){border-bottom:1px solid var(--line-dark)}
   .foot-grid{grid-template-columns:1fr 1fr}
   .gal{grid-template-columns:repeat(2,1fr)}
 }
@@ -521,7 +645,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   <div class="wrap">
     <a class="logo" href="index.html">
       <svg viewBox="0 0 16 20" aria-hidden="true"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5" fill="#F2A413"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4" fill="#E24A72"/></svg>
-      <span>Spice Troupe<small>Cultural dance group &#183; Lagos</small></span>
+      <span>Spice Troupe<small>Cultural dance group &#183; Lagos &amp; Abuja</small></span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Main">
@@ -566,23 +690,25 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
       <div>
         <p class="eyebrow">Enquiry</p>
         <h2 style="margin-bottom:1.2rem">Tell us about the event.</h2>
-        <p style="color:var(--muted);margin-bottom:1.6rem">Quickest route is WhatsApp &#8212; it opens a chat with the date question already typed. Or fill in the form and we&#8217;ll email you back.</p>
+        <p style="color:var(--muted);margin-bottom:1.6rem">Fill this in and it opens WhatsApp with your details already written out &#8212; you just press send. Or message us directly if you&#8217;d rather type it yourself.</p>
         <div class="btn-row" style="margin:0 0 2.2rem">
           <a class="btn" style="background:#25D366;color:#fff" href="https://wa.me/2348138067502?text=Hi%20Spice%20Troupe%2C%20I%27d%20like%20to%20check%20a%20date%20for%20an%20event." target="_blank" rel="noopener">Message us on WhatsApp</a>
         </div>
 
-        <!-- This form needs connecting to a service before it will send anything.
-             Formspree, Netlify Forms and Getform all work with plain HTML like this:
-             set action="https://formspree.io/f/YOUR-ID" and method="POST". -->
-        <form class="form" action="#" method="post">
+        <!-- This form sends via WhatsApp: the script at the bottom of the page collects
+             the fields and opens a chat with the message pre-written. Nothing to sign up for.
+             To receive enquiries by EMAIL instead, sign up with Formspree (or Netlify Forms /
+             Getform), then set action="https://formspree.io/f/YOUR-ID" method="post"
+             and delete the id="waForm" attribute so the script stops intercepting it. -->
+        <form class="form" id="waForm" action="#" method="post">
           <div class="pair">
             <div class="field">
               <label for="name">Your name</label>
               <input id="name" name="name" type="text" autocomplete="name" required>
             </div>
             <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
+              <label for="email">Email or WhatsApp number</label>
+              <input id="email" name="email" type="text" autocomplete="email" required>
             </div>
           </div>
           <div class="pair">
@@ -618,7 +744,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
             <label for="style">Tradition you have in mind</label>
             <select id="style" name="style">
               <option>Not sure yet &#8212; suggest something</option>
-              <option>B&#225;t&#225;</option><option>At&#237;l&#242;gw&#249;</option><option>Ekombi</option><option>Swange</option><option>Koroso</option><option>Ohafia War Dance</option><option>Afrobeats &amp; Street</option><option>Contemporary &amp; commissioned</option>
+              <option>Traditional African</option><option>Pan-African &amp; Afro Fusion</option><option>Contemporary &amp; Ballet</option><option>Carnival &amp; Parade</option><option>Global Cultural Dances</option><option>Theatrical &amp; Flag Choreography</option>
               <option>A commissioned piece</option>
             </select>
           </div>
@@ -627,14 +753,44 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
             <textarea id="message" name="message" placeholder="Floor size, ceiling height, power, timings, or a track you would like us to work to."></textarea>
           </div>
           <div>
-            <button class="btn btn--primary" type="submit">Send enquiry</button>
+            <button class="btn" style="background:#25D366;color:#fff" type="submit">Send via WhatsApp</button>
           </div>
-          <p class="form-note">We reply to every enquiry, including the ones we can&#8217;t take. Your details are used to answer you and nothing else.</p>
+          <p class="form-note">Opens WhatsApp with your answers written out. We reply to every enquiry, including the ones we can&#8217;t take. Your details are used to answer you and nothing else.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  var form = document.getElementById('waForm');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = function(id){
+      var el = document.getElementById(id);
+      return el && el.value ? el.value.trim() : '';
+    };
+    var lines = [
+      'Hi Spice Troupe, I would like to check a date.',
+      '',
+      'Name: ' + v('name'),
+      'Contact: ' + v('email'),
+      'Date: ' + (v('date') || 'not fixed yet'),
+      'Event: ' + v('kind'),
+      'Venue: ' + (v('venue') || 'to confirm'),
+      'Guests: ' + (v('guests') || 'to confirm'),
+      'Production: ' + v('style')
+    ];
+    var extra = v('message');
+    if (extra) { lines.push('', 'Notes: ' + extra); }
+    window.open('https://wa.me/2348138067502?text=' + encodeURIComponent(lines.join('
+')),
+                '_blank', 'noopener');
+  });
+})();
+</script>
 
 </main>
 
@@ -645,7 +801,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
     <div class="foot-grid">
       <div>
         <h4>Spice Troupe</h4>
-        <p>A cultural dance group based in Lagos, performing traditional and contemporary Nigerian dance at weddings, corporate events, festivals and cultural celebrations nationwide.</p>
+        <p>A premier cultural and contemporary dance company with resident performers in Lagos and Abuja, delivering traditional African, Pan-African and global cultural productions nationwide and worldwide.</p>
       </div>
       <div>
         <h4>Pages</h4>
@@ -668,8 +824,8 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
       </div>
     </div>
     <div class="foot-base">
-      <span>&#169; 2026 Spice Troupe &#183; Lagos, Nigeria</span>
-      <span>Available nationwide</span>
+      <span>&#169; 2026 Spice Troupe &#183; Lagos &amp; Abuja, Nigeria</span>
+      <span>Available nationwide and worldwide</span>
     </div>
   </div>
 </footer>
