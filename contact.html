@@ -174,12 +174,17 @@ p:last-child{margin-bottom:0}
 
 /* video background. Falls back to the poster image, then to flat aubergine. */
 .hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
+/* Both layers occupy the same box. Without absolute positioning the poster
+   fills the container and pushes the video out of view. */
 .hero-media video,.hero-media img{
+  position:absolute;inset:0;
   width:100%;height:100%;object-fit:cover;object-position:center 32%;
   display:block;filter:saturate(1.05)
 }
+.hero-media img{z-index:0}
+.hero-media video{z-index:1}
 .hero-media::after{
-  content:"";position:absolute;inset:0;
+  content:"";position:absolute;inset:0;z-index:2;   /* must sit above the video */
   background:linear-gradient(180deg,rgba(43,15,51,.86) 0%,rgba(43,15,51,.7) 45%,rgba(43,15,51,.95) 100%);
 }
 .hero--video .trail{opacity:.92}
