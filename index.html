@@ -3,8 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spice Troupe &#8212; cultural dance company, Lagos &amp; Abuja</title>
-<meta name="description" content="A premier cultural and contemporary dance company based in Lagos and Abuja, performing traditional African, Pan-African, carnival and global cultural productions nationwide.">
+<title>Cultural Dance Group in Lagos &amp; Abuja | Spice Troupe</title>
+<meta name="description" content="Book professional Nigerian cultural dancers for weddings, corporate events and galas. Nigerian traditional, carnival and Afro-fusion productions from Lagos and Abuja, nationwide. WhatsApp for a same-day quote.">
+<link rel="canonical" href="https://www.spicetroupe.ng/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spice Troupe">
+<meta property="og:locale" content="en_NG">
+<meta property="og:title" content="Cultural Dance Group in Lagos &amp; Abuja | Spice Troupe">
+<meta property="og:description" content="Book professional Nigerian cultural dancers for weddings, corporate events and galas. Nigerian traditional, carnival and Afro-fusion productions from Lagos and Abuja, nationwide. WhatsApp for a same-day quote.">
+<meta property="og:url" content="https://www.spicetroupe.ng/">
+<meta property="og:image" content="https://www.spicetroupe.ng/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cultural Dance Group in Lagos &amp; Abuja | Spice Troupe">
+<meta name="twitter:description" content="Book professional Nigerian cultural dancers for weddings, corporate events and galas. Nigerian traditional, carnival and Afro-fusion productions from Lagos and Abuja, nationwide. WhatsApp for a same-day quote.">
+<meta name="twitter:image" content="https://www.spicetroupe.ng/images/og-cover.jpg">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 20'%3E%3Cellipse cx='8' cy='6.5' rx='5.2' ry='6.5' fill='%23F2A413'/%3E%3Cellipse cx='8' cy='16.4' rx='3.6' ry='3.4' fill='%23E24A72'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,7 +175,7 @@ p:last-child{margin-bottom:0}
 /* video background. Falls back to the poster image, then to flat aubergine. */
 .hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hero-media video,.hero-media img{
-  width:100%;height:100%;object-fit:cover;object-position:center 35%;
+  width:100%;height:100%;object-fit:cover;object-position:center 32%;
   display:block;filter:saturate(1.05)
 }
 .hero-media::after{
@@ -268,28 +286,16 @@ p:last-child{margin-bottom:0}
 
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .gal figure{margin:0}
-.tile{
-  aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;
-  background:linear-gradient(150deg,var(--hue) 0%,var(--aubergine) 118%);
-  display:flex;align-items:flex-end;padding:22px;
-}
-.tile--wide{aspect-ratio:16/10}
-.tile span{font-family:var(--display);font-weight:800;font-size:1.15rem;color:#fff;
-  letter-spacing:-.02em;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.3)}
-.tile::after{
-  content:"Photo slot";position:absolute;top:14px;left:14px;font-family:var(--mono);
-  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);
-  border:1px solid rgba(255,255,255,.4);padding:3px 7px;border-radius:20px;
-}
-.gal figcaption{font-size:.88rem;color:var(--muted);margin-top:.7rem}
+.gal img{width:100%;height:auto;border-radius:var(--r);display:block;
+  background:var(--line);aspect-ratio:auto}
+.gal figcaption{font-size:.9rem;color:var(--muted);margin-top:.85rem;line-height:1.5}
+.gal figcaption b{display:block;font-family:var(--display);font-weight:700;font-size:1rem;
+  color:var(--aubergine);letter-spacing:-.012em;margin-bottom:.3rem}
 
 /* instagram embeds */
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
 .ig-grid .instagram-media{min-width:0!important;width:100%!important;margin:0!important;
   border-radius:var(--r)!important;border:1px solid var(--line)!important;box-shadow:none!important}
-.ig-empty{border:1px dashed var(--line);border-radius:var(--r);padding:26px;background:var(--paper)}
-.ig-empty p{font-size:.9rem;color:var(--muted)}
-.ig-empty .spec{display:block;margin-top:.8rem;word-break:break-all;color:var(--indigo)}
 @media (max-width:1000px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:720px){.ig-grid{grid-template-columns:1fr}}
 
@@ -377,47 +383,50 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted-dark)}
 
-/* ---------- package price breakdown ---------- */
+/* ---------- service blocks ---------- */
 
-.pkg{display:flex;flex-direction:column}
-.pkg .lineup{margin:0 0 1.2rem;padding:0;list-style:none;display:grid;gap:.34rem}
-
-/* what each option performs — the actual difference between the three */
-.perf{margin:0 0 1.3rem;padding:0;list-style:none;display:grid;gap:.6rem}
-.perf li{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;line-height:1.4}
-.perf li::before{
-  content:"";width:17px;height:17px;border-radius:50%;flex:none;margin-top:.14rem;
-  background:var(--hue);
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%23000'/%3E%3C/svg%3E") center/13px no-repeat,linear-gradient(#000,#000);
-  -webkit-mask-composite:xor;
-  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%23000'/%3E%3C/svg%3E") center/13px no-repeat,linear-gradient(#000,#000);
-  mask-composite:exclude;
+.service{
+  display:grid;grid-template-columns:.82fr 1.18fr;gap:44px;
+  padding:40px 0;border-top:1px solid var(--line);align-items:start;
 }
-.perf li strong{font-weight:700}
-.perf li em{font-style:normal;color:var(--muted);font-size:.89rem;display:block;margin-top:.1rem}
-.perf li.off{color:var(--muted);opacity:.55}
-.perf li.off::before{
-  background:var(--muted);
-  -webkit-mask:none;mask:none;
-  border-radius:50%;height:2px;width:11px;margin-top:.62rem;margin-left:3px;margin-right:3px;
+.on-dark .service{border-top-color:var(--line-dark)}
+.service:first-of-type{border-top:0;padding-top:0}
+
+.service-head h3{margin-bottom:.9rem;position:relative;padding-top:1.1rem}
+.service-head h3::before{content:"";position:absolute;top:0;left:0;width:52px;height:5px;
+  border-radius:3px;background:var(--hue)}
+.service-head p{font-size:.95rem;color:var(--muted);max-width:40ch}
+.on-dark .service-head p{color:var(--muted-dark)}
+
+.service-fee{
+  display:inline-flex;align-items:baseline;gap:.5rem;margin-top:1.1rem!important;
+  font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;
+  border:1px solid var(--line);border-radius:999px;padding:.5rem 1rem;color:var(--aubergine)!important;
 }
-.pkg .lineup li{font-size:.92rem;color:var(--muted);display:flex;gap:.55rem;align-items:baseline}
-.pkg .lineup li b{font-family:var(--mono);font-size:.8rem;color:var(--hue);font-weight:500;
-  min-width:1.6rem;flex:none}
+.on-dark .service-fee{border-color:var(--line-dark);color:var(--mist)!important}
+.service-fee b{font-family:var(--display);font-size:1.05rem;font-weight:800;letter-spacing:-.02em}
 
-.price-lines{margin:auto 0 0;padding-top:1.1rem;border-top:1px solid var(--line)}
-.price-line{display:flex;justify-content:space-between;gap:1rem;padding:.34rem 0;font-size:.93rem}
-.price-line span:first-child{color:var(--muted)}
-.price-line span:last-child{font-family:var(--mono);font-size:.86rem;white-space:nowrap}
-.price-line--total{margin-top:.5rem;padding-top:.7rem;border-top:1px solid var(--line);
-  font-weight:700}
-.price-line--total span:first-child{color:var(--aubergine)}
-.price-line--total span:last-child{font-family:var(--display);font-size:1.15rem;font-weight:800;
-  letter-spacing:-.02em}
+.service-items{margin:0;display:grid;gap:1.15rem}
+.service-items>div{display:grid;gap:.28rem}
+.service-items dt{font-family:var(--display);font-weight:700;font-size:1.02rem;
+  letter-spacing:-.012em;display:flex;flex-wrap:wrap;align-items:baseline;gap:.7rem}
+.service-items dt span{font-family:var(--mono);font-size:.76rem;font-weight:400;color:var(--hue);
+  letter-spacing:.03em}
+.service-items dd{margin:0;font-size:.94rem;color:var(--muted);max-width:66ch;line-height:1.55}
+.on-dark .service-items dd{color:var(--muted-dark)}
 
-.pkg-for{font-size:.86rem;color:var(--muted);font-style:italic;margin:-.4rem 0 1.2rem}
-.pkg-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 .6rem;padding-top:1rem;border-top:1px solid var(--line)}
+.service-chips{display:flex;flex-wrap:wrap;gap:9px;margin:0;padding:0;list-style:none}
+.service-chips li{font-size:.93rem;font-weight:500;border:1px solid var(--line);
+  border-radius:999px;padding:.45rem 1rem;background:var(--paper)}
+.on-dark .service-chips li{border-color:var(--line-dark);background:rgba(255,255,255,.05)}
+
+.service-note{margin-top:1.4rem!important;font-size:.9rem;color:var(--muted);
+  padding-left:16px;border-left:3px solid var(--hue)}
+.on-dark .service-note{color:var(--muted-dark)}
+
+@media (max-width:1000px){
+  .service{grid-template-columns:1fr;gap:24px;padding:34px 0}
+}
 
 /* ---------- terms ---------- */
 
@@ -637,6 +646,59 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 @media print{.masthead,.band,.foot{display:none}}
 
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["PerformingGroup", "LocalBusiness"],
+      "@id": "https://www.spicetroupe.ng/#organisation",
+      "name": "Spice Troupe",
+      "alternateName": "Spice Troupe Cultural Dance Group",
+      "description": "A premier cultural and contemporary dance company with resident performers in Lagos and Abuja, performing traditional African, Pan-African, carnival and global cultural productions across Nigeria and worldwide.",
+      "url": "https://www.spicetroupe.ng/",
+      "logo": "https://www.spicetroupe.ng/images/og-cover.jpg",
+      "image": "https://www.spicetroupe.ng/images/og-cover.jpg",
+      "telephone": "+2348138067502",
+      "email": "hello@spicetroupe.ng",
+      "priceRange": "₦2,000,000+",
+      "currenciesAccepted": "NGN",
+      "address": [
+        { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
+        { "@type": "PostalAddress", "addressLocality": "Abuja", "addressCountry": "NG" }
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "Nigeria" },
+        { "@type": "City", "name": "Lagos" },
+        { "@type": "City", "name": "Abuja" }
+      ],
+      "sameAs": ["https://www.instagram.com/spicetroupe/"],
+      "knowsAbout": [
+        "Nigerian traditional dance", "Traditional African dance", "Bàtá", "Atilogwu", "Ekombi", "Swange",
+        "Koroso", "Carnival and parade performance", "Afro fusion dance",
+        "Theatrical and flag choreography"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "name": "Wedding Entertainment", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Nigerian Multicultural Displays", "price": "2500000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Funeral Entertainment", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Special Welcome Experiences — Airport Welcome", "price": "1000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Special Welcome Experiences — VIP Cultural Welcome", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "International Displays", "price": "5000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Media Production", "price": "5000000", "priceCurrency": "NGN" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.spicetroupe.ng/#website",
+      "url": "https://www.spicetroupe.ng/",
+      "name": "Spice Troupe",
+      "publisher": { "@id": "https://www.spicetroupe.ng/#organisation" },
+      "inLanguage": "en-NG"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -645,7 +707,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   <div class="wrap">
     <a class="logo" href="index.html">
       <svg viewBox="0 0 16 20" aria-hidden="true"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5" fill="#F2A413"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4" fill="#E24A72"/></svg>
-      <span>Spice Troupe<small>Cultural dance group &#183; Lagos &amp; Abuja</small></span>
+      <span>Spice Troupe<small>Cultural &amp; Contemporary Dance Group</small></span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Main">
@@ -663,10 +725,10 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 
 <main id="main">
 
-<section class="hero">
-  
+<section class="hero hero--video">
+  <div class="hero-media"><img src="images/hero.jpg" alt="" aria-hidden="true" class="hero-fallback"><video autoplay muted loop playsinline preload="metadata" poster="images/hero.jpg"><source src="images/hero.mp4" type="video/mp4"></video></div>
   <div class="wrap">
-    <p class="eyebrow" style="color:var(--muted-dark)">Cultural dance group &#183; Lagos &amp; Abuja &#183; Travel nationwide</p>
+    <p class="eyebrow" style="color:var(--muted-dark)">Cultural &amp; Contemporary Dance Group &#183; Lagos &amp; Abuja &#183; Travel nationwide</p>
     <h1>Cultures across the globe.</h1>
     <p class="lede" style="color:var(--muted-dark)">Spice Troupe is a premier cultural and contemporary dance company with elite resident performers in Lagos and Abuja &#8212; and the capacity to deliver anywhere in the world.</p>
     <div class="btn-row">
@@ -683,9 +745,9 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
     </svg>
   </div>
   <nav class="ribbon" aria-label="Dance styles">
-      <a href="styles.html#traditional" style="--hue:var(--marigold)"><i></i><b>Traditional African</b></a>
+      <a href="styles.html#traditional" style="--hue:var(--marigold)"><i></i><b>Nigerian Traditional</b></a>
       <a href="styles.html#panafrican" style="--hue:var(--coral)"><i></i><b>Pan-African &amp; Afro Fusion</b></a>
-      <a href="styles.html#contemporary" style="--hue:var(--orchid)"><i></i><b>Contemporary &amp; Ballet</b></a>
+      <a href="styles.html#contemporary" style="--hue:var(--orchid)"><i></i><b>Contemporary</b></a>
       <a href="styles.html#carnival" style="--hue:var(--cyan)"><i></i><b>Carnival &amp; Parade</b></a>
       <a href="styles.html#global" style="--hue:var(--jade)"><i></i><b>Global Cultural Dances</b></a>
       <a href="styles.html#theatrical" style="--hue:var(--violet)"><i></i><b>Theatrical &amp; Flag Choreography</b></a>
@@ -706,7 +768,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
           <li>Costume, choreography and music included in the quoted price</li>
           <li>Sets from 6 to 30 minutes, or a full evening in three appearances</li>
           <li>Live drummers and vocalists available for every traditional production</li>
-          <li>We travel with our own PA, and can run off your generator</li>
+          <li>Resident performers in Lagos and Abuja, available nationwide and worldwide</li>
         </ul>
       </div>
     </div>
@@ -735,7 +797,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
       <p class="lede" style="margin-top:1.2rem">Traditional, contemporary and theatrical work celebrating cultures from Africa and around the world. Each carries its own music, costume and staging requirements.</p>
     </div>
     <div class="grid grid--3">
-      <article class="card card--style rise" style="--hue:var(--marigold)"><h3>Traditional African</h3><p class="origin">Indigenous cultural performance</p><p>Danced by performers who grew up in these traditions, with live percussion rather than a recorded track.</p></article><article class="card card--style rise" style="--hue:var(--coral)"><h3>Pan-African &amp; Afro Fusion</h3><p class="origin">Contemporary, rooted</p><p>Original productions drawing on the rhythms and movement vocabulary of the continent, built for audiences who want something current without losing the heritage underneath it.</p></article><article class="card card--style rise" style="--hue:var(--orchid)"><h3>Contemporary &amp; Ballet</h3><p class="origin">Expressive and elegant</p><p>Modern choreography for premium events and stage productions.</p></article><article class="card card--style rise" style="--hue:var(--cyan)"><h3>Carnival &amp; Parade</h3><p class="origin">High-energy spectacle</p><p>Vibrant costume, cultural processions and dynamic choreography, on a stage or moving through a venue.</p></article><article class="card card--style rise" style="--hue:var(--jade)"><h3>Global Cultural Dances</h3><p class="origin">Cultures across the globe</p><p>Performances inspired by traditions from around the world, for international audiences, embassy evenings and events where the room is not only Nigerian.</p></article><article class="card card--style rise" style="--hue:var(--violet)"><h3>Theatrical &amp; Flag Choreography</h3><p class="origin">Story-driven production</p><p>Narrative productions for opening ceremonies, conferences, galas and international events, combining choreography, flag displays and staging into one piece.</p></article>
+      <article class="card card--style rise" style="--hue:var(--marigold)"><h3>Nigerian Traditional</h3><p class="origin">Indigenous cultural performance</p><p>Danced by performers who grew up in these traditions, with live percussion rather than a recorded track.</p></article><article class="card card--style rise" style="--hue:var(--coral)"><h3>Pan-African &amp; Afro Fusion</h3><p class="origin">Contemporary, rooted</p><p>Original productions drawing on the rhythms and movement vocabulary of the continent, built for audiences who want something current without losing the heritage underneath it.</p></article><article class="card card--style rise" style="--hue:var(--orchid)"><h3>Contemporary</h3><p class="origin">Expressive and elegant</p><p>Modern choreography for premium events and stage productions.</p></article><article class="card card--style rise" style="--hue:var(--cyan)"><h3>Carnival &amp; Parade</h3><p class="origin">High-energy spectacle</p><p>Vibrant costume, cultural processions and dynamic choreography, on a stage or moving through a venue.</p></article><article class="card card--style rise" style="--hue:var(--jade)"><h3>Global Cultural Dances</h3><p class="origin">Cultures across the globe</p><p>Performances inspired by traditions from around the world, for international audiences, embassy evenings and events where the room is not only Nigerian.</p></article><article class="card card--style rise" style="--hue:var(--violet)"><h3>Theatrical &amp; Flag Choreography</h3><p class="origin">Story-driven production</p><p>Narrative productions for opening ceremonies, conferences, galas and international events, combining choreography, flag displays and staging into one piece.</p></article>
     </div>
     <div class="btn-row">
       <a class="btn btn--ghost" href="styles.html">The full repertoire</a>
@@ -750,7 +812,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
       <h2>Four steps, about ten minutes of your time.</h2>
     </div>
     <div class="steps">
-      <div class="step-item rise"><div class="n"><span>Step 1</span><svg viewBox="0 0 16 20" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4"/></svg></div><h4>Send us the date</h4><p>Venue, start time, indoor or outdoor, and roughly how many guests. WhatsApp is fine &#8212; four lines is plenty.</p></div><div class="step-item rise"><div class="n"><span>Step 2</span><svg viewBox="0 0 16 20" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4"/></svg></div><h4>We propose a set</h4><p>Two or three options with running times, dancer numbers and a fixed price. Nothing is held until you say yes.</p></div><div class="step-item rise"><div class="n"><span>Step 3</span><svg viewBox="0 0 16 20" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4"/></svg></div><h4>Payment secures the date</h4><p>Only payment confirms a reservation. Booking months ahead? A 70% deposit locks in current rates. You get a written agreement and a music brief.</p></div><div class="step-item rise"><div class="n"><span>Step 4</span><svg viewBox="0 0 16 20" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4"/></svg></div><h4>We arrive early</h4><p>Dancers arrive two hours before the set to change, check the floor and meet whoever is running the room.</p></div>
+      <div class="step-item rise"><div class="n"><span>Step 1</span><svg viewBox="0 0 16 20" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4"/></svg></div><h4>Send us the date</h4><p>Venue, start time, indoor or outdoor, and roughly how many guests. WhatsApp is fine &#8212; four lines is plenty.</p></div><div class="step-item rise"><div class="n"><span>Step 2</span><svg viewBox="0 0 16 20" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4"/></svg></div><h4>We propose a set</h4><p>Two or three options with running times, dancer numbers and a fixed price. Nothing is held until you say yes.</p></div><div class="step-item rise"><div class="n"><span>Step 3</span><svg viewBox="0 0 16 20" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4"/></svg></div><h4>Payment secures the date</h4><p>Only payment confirms a reservation. Booking months ahead? A 70% deposit locks in current rates. Costumes and logistics are confirmed on the final invoice.</p></div><div class="step-item rise"><div class="n"><span>Step 4</span><svg viewBox="0 0 16 20" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4"/></svg></div><h4>We arrive early</h4><p>Dancers arrive two hours before the set to change, check the floor and meet whoever is running the room.</p></div>
     </div>
   </div>
 </section>
@@ -762,7 +824,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
       <p class="eyebrow">Trusted by</p>
       <h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem)">Trusted by leading organisations, royal households, traditional institutions, global brands and discerning clients to create extraordinary cultural experiences with world-class artistry and uncompromising excellence.</h2>
     </div>
-    <div class="marquee"><div class="marquee-track" aria-label="Client logos"><div class="logo-cell"><img src="images/logos/ncaa.png" alt="Nigerian Civil Aviation Authority" loading="lazy"></div><div class="logo-cell"><img src="images/logos/abia-state.png" alt="Government of Abia State" loading="lazy"></div><div class="logo-cell"><img src="images/logos/the-wheat-baker.png" alt="The Wheat Baker, Lagos" loading="lazy"></div><div class="logo-cell"><img src="images/logos/deep-learning-indaba.png" alt="Deep Learning Indaba" loading="lazy"></div><div class="logo-cell"><img src="images/logos/anambra-state.png" alt="Government of Anambra State" loading="lazy"></div><div class="logo-cell"><img src="images/logos/riggs-london.png" alt="Riggs London" loading="lazy"></div><div class="logo-cell"><img src="images/logos/billionaire-realtors.png" alt="Billionaire Realtors" loading="lazy"></div><div class="logo-cell"><img src="images/logos/aceroyal-estates.png" alt="Aceroyal Estates" loading="lazy"></div><div class="logo-cell"><img src="images/logos/ncaa.png" alt="Nigerian Civil Aviation Authority" loading="lazy"></div><div class="logo-cell"><img src="images/logos/abia-state.png" alt="Government of Abia State" loading="lazy"></div><div class="logo-cell"><img src="images/logos/the-wheat-baker.png" alt="The Wheat Baker, Lagos" loading="lazy"></div><div class="logo-cell"><img src="images/logos/deep-learning-indaba.png" alt="Deep Learning Indaba" loading="lazy"></div><div class="logo-cell"><img src="images/logos/anambra-state.png" alt="Government of Anambra State" loading="lazy"></div><div class="logo-cell"><img src="images/logos/riggs-london.png" alt="Riggs London" loading="lazy"></div><div class="logo-cell"><img src="images/logos/billionaire-realtors.png" alt="Billionaire Realtors" loading="lazy"></div><div class="logo-cell"><img src="images/logos/aceroyal-estates.png" alt="Aceroyal Estates" loading="lazy"></div></div></div>
+    <div class="marquee"><div class="marquee-track" aria-label="Client logos"><div class="logo-cell"><img src="images/logos/ncaa.png" alt="Nigerian Civil Aviation Authority" loading="lazy"></div><div class="logo-cell"><img src="images/logos/the-wheat-baker.png" alt="The Wheat Baker, Lagos" loading="lazy"></div><div class="logo-cell"><img src="images/logos/abia-state.png" alt="Government of Abia State" loading="lazy"></div><div class="logo-cell"><img src="images/logos/deep-learning-indaba.png" alt="Deep Learning Indaba" loading="lazy"></div><div class="logo-cell"><img src="images/logos/anambra-state.png" alt="Government of Anambra State" loading="lazy"></div><div class="logo-cell"><img src="images/logos/arise-africa.png" alt="Arise Africa &#8212; Africa Real Estate Innovation Summit of Excellence" loading="lazy"></div><div class="logo-cell"><img src="images/logos/riggs-london.png" alt="Riggs London" loading="lazy"></div><div class="logo-cell"><img src="images/logos/billionaire-realtors.png" alt="Billionaire Realtors" loading="lazy"></div><div class="logo-cell"><img src="images/logos/aceroyal-estates.png" alt="Aceroyal Estates" loading="lazy"></div><div class="logo-cell"><img src="images/logos/ncaa.png" alt="Nigerian Civil Aviation Authority" loading="lazy"></div><div class="logo-cell"><img src="images/logos/the-wheat-baker.png" alt="The Wheat Baker, Lagos" loading="lazy"></div><div class="logo-cell"><img src="images/logos/abia-state.png" alt="Government of Abia State" loading="lazy"></div><div class="logo-cell"><img src="images/logos/deep-learning-indaba.png" alt="Deep Learning Indaba" loading="lazy"></div><div class="logo-cell"><img src="images/logos/anambra-state.png" alt="Government of Anambra State" loading="lazy"></div><div class="logo-cell"><img src="images/logos/arise-africa.png" alt="Arise Africa &#8212; Africa Real Estate Innovation Summit of Excellence" loading="lazy"></div><div class="logo-cell"><img src="images/logos/riggs-london.png" alt="Riggs London" loading="lazy"></div><div class="logo-cell"><img src="images/logos/billionaire-realtors.png" alt="Billionaire Realtors" loading="lazy"></div><div class="logo-cell"><img src="images/logos/aceroyal-estates.png" alt="Aceroyal Estates" loading="lazy"></div></div></div>
   </div>
 </section>
 
@@ -795,7 +857,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 <section class="band">
   <div class="wrap">
     <div>
-      <h2>Tell us the date and we&#8217;ll tell you what fits.</h2>
+      <h2>Tell us the date and the event type.</h2>
       <p>Send the venue, the time of day and the kind of crowd. You&#8217;ll get a reply with two or three options and a price the same day.</p>
     </div>
     <a class="btn btn--primary" href="contact.html">Check a date</a>

@@ -3,8 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Past events &#8212; Spice Troupe</title>
-<meta name="description" content="A record of weddings, festivals, corporate events and cultural celebrations Spice Troupe has performed at across Nigeria over the last three years.">
+<title>Past Events &amp; Clients | Spice Troupe</title>
+<meta name="description" content="Where Spice Troupe has performed: weddings, corporate events, galas and festivals across Nigeria, with the production delivered and the size of each room.">
+<link rel="canonical" href="https://www.spicetroupe.ng/past-events.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spice Troupe">
+<meta property="og:locale" content="en_NG">
+<meta property="og:title" content="Past Events &amp; Clients | Spice Troupe">
+<meta property="og:description" content="Where Spice Troupe has performed: weddings, corporate events, galas and festivals across Nigeria, with the production delivered and the size of each room.">
+<meta property="og:url" content="https://www.spicetroupe.ng/past-events.html">
+<meta property="og:image" content="https://www.spicetroupe.ng/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Past Events &amp; Clients | Spice Troupe">
+<meta name="twitter:description" content="Where Spice Troupe has performed: weddings, corporate events, galas and festivals across Nigeria, with the production delivered and the size of each room.">
+<meta name="twitter:image" content="https://www.spicetroupe.ng/images/og-cover.jpg">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 20'%3E%3Cellipse cx='8' cy='6.5' rx='5.2' ry='6.5' fill='%23F2A413'/%3E%3Cellipse cx='8' cy='16.4' rx='3.6' ry='3.4' fill='%23E24A72'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,7 +175,7 @@ p:last-child{margin-bottom:0}
 /* video background. Falls back to the poster image, then to flat aubergine. */
 .hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hero-media video,.hero-media img{
-  width:100%;height:100%;object-fit:cover;object-position:center 35%;
+  width:100%;height:100%;object-fit:cover;object-position:center 32%;
   display:block;filter:saturate(1.05)
 }
 .hero-media::after{
@@ -268,28 +286,16 @@ p:last-child{margin-bottom:0}
 
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .gal figure{margin:0}
-.tile{
-  aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;
-  background:linear-gradient(150deg,var(--hue) 0%,var(--aubergine) 118%);
-  display:flex;align-items:flex-end;padding:22px;
-}
-.tile--wide{aspect-ratio:16/10}
-.tile span{font-family:var(--display);font-weight:800;font-size:1.15rem;color:#fff;
-  letter-spacing:-.02em;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.3)}
-.tile::after{
-  content:"Photo slot";position:absolute;top:14px;left:14px;font-family:var(--mono);
-  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);
-  border:1px solid rgba(255,255,255,.4);padding:3px 7px;border-radius:20px;
-}
-.gal figcaption{font-size:.88rem;color:var(--muted);margin-top:.7rem}
+.gal img{width:100%;height:auto;border-radius:var(--r);display:block;
+  background:var(--line);aspect-ratio:auto}
+.gal figcaption{font-size:.9rem;color:var(--muted);margin-top:.85rem;line-height:1.5}
+.gal figcaption b{display:block;font-family:var(--display);font-weight:700;font-size:1rem;
+  color:var(--aubergine);letter-spacing:-.012em;margin-bottom:.3rem}
 
 /* instagram embeds */
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
 .ig-grid .instagram-media{min-width:0!important;width:100%!important;margin:0!important;
   border-radius:var(--r)!important;border:1px solid var(--line)!important;box-shadow:none!important}
-.ig-empty{border:1px dashed var(--line);border-radius:var(--r);padding:26px;background:var(--paper)}
-.ig-empty p{font-size:.9rem;color:var(--muted)}
-.ig-empty .spec{display:block;margin-top:.8rem;word-break:break-all;color:var(--indigo)}
 @media (max-width:1000px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:720px){.ig-grid{grid-template-columns:1fr}}
 
@@ -377,47 +383,50 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted-dark)}
 
-/* ---------- package price breakdown ---------- */
+/* ---------- service blocks ---------- */
 
-.pkg{display:flex;flex-direction:column}
-.pkg .lineup{margin:0 0 1.2rem;padding:0;list-style:none;display:grid;gap:.34rem}
-
-/* what each option performs — the actual difference between the three */
-.perf{margin:0 0 1.3rem;padding:0;list-style:none;display:grid;gap:.6rem}
-.perf li{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;line-height:1.4}
-.perf li::before{
-  content:"";width:17px;height:17px;border-radius:50%;flex:none;margin-top:.14rem;
-  background:var(--hue);
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%23000'/%3E%3C/svg%3E") center/13px no-repeat,linear-gradient(#000,#000);
-  -webkit-mask-composite:xor;
-  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%23000'/%3E%3C/svg%3E") center/13px no-repeat,linear-gradient(#000,#000);
-  mask-composite:exclude;
+.service{
+  display:grid;grid-template-columns:.82fr 1.18fr;gap:44px;
+  padding:40px 0;border-top:1px solid var(--line);align-items:start;
 }
-.perf li strong{font-weight:700}
-.perf li em{font-style:normal;color:var(--muted);font-size:.89rem;display:block;margin-top:.1rem}
-.perf li.off{color:var(--muted);opacity:.55}
-.perf li.off::before{
-  background:var(--muted);
-  -webkit-mask:none;mask:none;
-  border-radius:50%;height:2px;width:11px;margin-top:.62rem;margin-left:3px;margin-right:3px;
+.on-dark .service{border-top-color:var(--line-dark)}
+.service:first-of-type{border-top:0;padding-top:0}
+
+.service-head h3{margin-bottom:.9rem;position:relative;padding-top:1.1rem}
+.service-head h3::before{content:"";position:absolute;top:0;left:0;width:52px;height:5px;
+  border-radius:3px;background:var(--hue)}
+.service-head p{font-size:.95rem;color:var(--muted);max-width:40ch}
+.on-dark .service-head p{color:var(--muted-dark)}
+
+.service-fee{
+  display:inline-flex;align-items:baseline;gap:.5rem;margin-top:1.1rem!important;
+  font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;
+  border:1px solid var(--line);border-radius:999px;padding:.5rem 1rem;color:var(--aubergine)!important;
 }
-.pkg .lineup li{font-size:.92rem;color:var(--muted);display:flex;gap:.55rem;align-items:baseline}
-.pkg .lineup li b{font-family:var(--mono);font-size:.8rem;color:var(--hue);font-weight:500;
-  min-width:1.6rem;flex:none}
+.on-dark .service-fee{border-color:var(--line-dark);color:var(--mist)!important}
+.service-fee b{font-family:var(--display);font-size:1.05rem;font-weight:800;letter-spacing:-.02em}
 
-.price-lines{margin:auto 0 0;padding-top:1.1rem;border-top:1px solid var(--line)}
-.price-line{display:flex;justify-content:space-between;gap:1rem;padding:.34rem 0;font-size:.93rem}
-.price-line span:first-child{color:var(--muted)}
-.price-line span:last-child{font-family:var(--mono);font-size:.86rem;white-space:nowrap}
-.price-line--total{margin-top:.5rem;padding-top:.7rem;border-top:1px solid var(--line);
-  font-weight:700}
-.price-line--total span:first-child{color:var(--aubergine)}
-.price-line--total span:last-child{font-family:var(--display);font-size:1.15rem;font-weight:800;
-  letter-spacing:-.02em}
+.service-items{margin:0;display:grid;gap:1.15rem}
+.service-items>div{display:grid;gap:.28rem}
+.service-items dt{font-family:var(--display);font-weight:700;font-size:1.02rem;
+  letter-spacing:-.012em;display:flex;flex-wrap:wrap;align-items:baseline;gap:.7rem}
+.service-items dt span{font-family:var(--mono);font-size:.76rem;font-weight:400;color:var(--hue);
+  letter-spacing:.03em}
+.service-items dd{margin:0;font-size:.94rem;color:var(--muted);max-width:66ch;line-height:1.55}
+.on-dark .service-items dd{color:var(--muted-dark)}
 
-.pkg-for{font-size:.86rem;color:var(--muted);font-style:italic;margin:-.4rem 0 1.2rem}
-.pkg-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 .6rem;padding-top:1rem;border-top:1px solid var(--line)}
+.service-chips{display:flex;flex-wrap:wrap;gap:9px;margin:0;padding:0;list-style:none}
+.service-chips li{font-size:.93rem;font-weight:500;border:1px solid var(--line);
+  border-radius:999px;padding:.45rem 1rem;background:var(--paper)}
+.on-dark .service-chips li{border-color:var(--line-dark);background:rgba(255,255,255,.05)}
+
+.service-note{margin-top:1.4rem!important;font-size:.9rem;color:var(--muted);
+  padding-left:16px;border-left:3px solid var(--hue)}
+.on-dark .service-note{color:var(--muted-dark)}
+
+@media (max-width:1000px){
+  .service{grid-template-columns:1fr;gap:24px;padding:34px 0}
+}
 
 /* ---------- terms ---------- */
 
@@ -637,6 +646,59 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 @media print{.masthead,.band,.foot{display:none}}
 
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["PerformingGroup", "LocalBusiness"],
+      "@id": "https://www.spicetroupe.ng/#organisation",
+      "name": "Spice Troupe",
+      "alternateName": "Spice Troupe Cultural Dance Group",
+      "description": "A premier cultural and contemporary dance company with resident performers in Lagos and Abuja, performing traditional African, Pan-African, carnival and global cultural productions across Nigeria and worldwide.",
+      "url": "https://www.spicetroupe.ng/",
+      "logo": "https://www.spicetroupe.ng/images/og-cover.jpg",
+      "image": "https://www.spicetroupe.ng/images/og-cover.jpg",
+      "telephone": "+2348138067502",
+      "email": "hello@spicetroupe.ng",
+      "priceRange": "₦2,000,000+",
+      "currenciesAccepted": "NGN",
+      "address": [
+        { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
+        { "@type": "PostalAddress", "addressLocality": "Abuja", "addressCountry": "NG" }
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "Nigeria" },
+        { "@type": "City", "name": "Lagos" },
+        { "@type": "City", "name": "Abuja" }
+      ],
+      "sameAs": ["https://www.instagram.com/spicetroupe/"],
+      "knowsAbout": [
+        "Nigerian traditional dance", "Traditional African dance", "Bàtá", "Atilogwu", "Ekombi", "Swange",
+        "Koroso", "Carnival and parade performance", "Afro fusion dance",
+        "Theatrical and flag choreography"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "name": "Wedding Entertainment", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Nigerian Multicultural Displays", "price": "2500000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Funeral Entertainment", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Special Welcome Experiences — Airport Welcome", "price": "1000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Special Welcome Experiences — VIP Cultural Welcome", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "International Displays", "price": "5000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Media Production", "price": "5000000", "priceCurrency": "NGN" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.spicetroupe.ng/#website",
+      "url": "https://www.spicetroupe.ng/",
+      "name": "Spice Troupe",
+      "publisher": { "@id": "https://www.spicetroupe.ng/#organisation" },
+      "inLanguage": "en-NG"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -645,7 +707,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   <div class="wrap">
     <a class="logo" href="index.html">
       <svg viewBox="0 0 16 20" aria-hidden="true"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5" fill="#F2A413"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4" fill="#E24A72"/></svg>
-      <span>Spice Troupe<small>Cultural dance group &#183; Lagos &amp; Abuja</small></span>
+      <span>Spice Troupe<small>Cultural &amp; Contemporary Dance Group</small></span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Main">
@@ -679,7 +741,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 
 <section class="section">
   <div class="wrap">
-    <div class="year"><h3>2026</h3><span class="count">8 events listed</span></div><div class="log"><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">12 Jul</span><span class="what">Traditional wedding</span><span class="where">Ikeja, Lagos</span><span class="chip">Traditional African</span><span class="scale">400</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">28 Jun</span><span class="what">Bank annual dinner</span><span class="where">Victoria Island, Lagos</span><span class="chip">Traditional African</span><span class="scale">600</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--coral)"><span class="when">14 Jun</span><span class="what">Product launch</span><span class="where">Lekki, Lagos</span><span class="chip">Pan-African &amp; Afro Fusion</span><span class="scale">500</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--violet)"><span class="when">23 May</span><span class="what">School cultural day</span><span class="where">Lagos</span><span class="chip">Theatrical &amp; Flag</span><span class="scale">700 pupils</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">09 May</span><span class="what">Traditional wedding</span><span class="where">Asaba, Delta</span><span class="chip">Traditional African</span><span class="scale">350</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--cyan)"><span class="when">19 Apr</span><span class="what">Conference gala night</span><span class="where">Port Harcourt, Rivers</span><span class="chip">Carnival &amp; Parade</span><span class="scale">450</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--jade)"><span class="when">22 Mar</span><span class="what">Embassy cultural evening</span><span class="where">Abuja</span><span class="chip">Global Cultural</span><span class="scale">200</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">15 Feb</span><span class="what">60th birthday</span><span class="where">Ikoyi, Lagos</span><span class="chip">Traditional African</span><span class="scale">250</span></div></div><div class="year"><h3>2025</h3><span class="count">8 events listed</span></div><div class="log"><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--coral)"><span class="when">27 Dec</span><span class="what">December concert series</span><span class="where">Lekki, Lagos</span><span class="chip">Pan-African &amp; Afro Fusion</span><span class="scale">3,000+</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--cyan)"><span class="when">26 Dec</span><span class="what">Carnival week</span><span class="where">Calabar, Cross River</span><span class="chip">Carnival &amp; Parade</span><span class="scale">5,000+</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">25 Oct</span><span class="what">Company anniversary</span><span class="where">Ikeja, Lagos</span><span class="chip">Traditional African</span><span class="scale">800</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">13 Sep</span><span class="what">State cultural festival</span><span class="where">Kano</span><span class="chip">Traditional African</span><span class="scale">1,200</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">16 Aug</span><span class="what">New yam festival</span><span class="where">Enugu</span><span class="chip">Traditional African</span><span class="scale">900</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">05 Jul</span><span class="what">Traditional wedding</span><span class="where">Ibadan, Oyo</span><span class="chip">Traditional African</span><span class="scale">500</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--orchid)"><span class="when">17 May</span><span class="what">Industry awards night</span><span class="where">Victoria Island, Lagos</span><span class="chip">Contemporary &amp; Ballet</span><span class="scale">700</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--cyan)"><span class="when">08 Mar</span><span class="what">Women&#8217;s day reception</span><span class="where">Abuja</span><span class="chip">Carnival &amp; Parade</span><span class="scale">300</span></div></div><div class="year"><h3>2024</h3><span class="count">5 events listed</span></div><div class="log"><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">30 Nov</span><span class="what">Church anniversary</span><span class="where">Surulere, Lagos</span><span class="chip">Traditional African</span><span class="scale">600</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">19 Oct</span><span class="what">University cultural week</span><span class="where">Uyo, Akwa Ibom</span><span class="chip">Traditional African</span><span class="scale">1,000</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">24 Aug</span><span class="what">State cultural reception</span><span class="where">Makurdi, Benue</span><span class="chip">Traditional African</span><span class="scale">400</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">08 Jun</span><span class="what">Traditional wedding</span><span class="where">Owerri, Imo</span><span class="chip">Traditional African</span><span class="scale">450</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--coral)"><span class="when">20 Apr</span><span class="what">Hotel opening</span><span class="where">Victoria Island, Lagos</span><span class="chip">Pan-African &amp; Afro Fusion</span><span class="scale">300</span></div></div>
+    <div class="year"><h3>2026</h3><span class="count">8 events listed</span></div><div class="log"><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">12 Jul</span><span class="what">Traditional wedding</span><span class="where">Ikeja, Lagos</span><span class="chip">Nigerian Traditional</span><span class="scale">400</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">28 Jun</span><span class="what">Bank annual dinner</span><span class="where">Victoria Island, Lagos</span><span class="chip">Nigerian Traditional</span><span class="scale">600</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--coral)"><span class="when">14 Jun</span><span class="what">Product launch</span><span class="where">Lekki, Lagos</span><span class="chip">Pan-African &amp; Afro Fusion</span><span class="scale">500</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--violet)"><span class="when">23 May</span><span class="what">School cultural day</span><span class="where">Lagos</span><span class="chip">Theatrical &amp; Flag</span><span class="scale">700 pupils</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">09 May</span><span class="what">Traditional wedding</span><span class="where">Asaba, Delta</span><span class="chip">Nigerian Traditional</span><span class="scale">350</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--cyan)"><span class="when">19 Apr</span><span class="what">Conference gala night</span><span class="where">Port Harcourt, Rivers</span><span class="chip">Carnival &amp; Parade</span><span class="scale">450</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--jade)"><span class="when">22 Mar</span><span class="what">Embassy cultural evening</span><span class="where">Abuja</span><span class="chip">Global Cultural</span><span class="scale">200</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">15 Feb</span><span class="what">60th birthday</span><span class="where">Ikoyi, Lagos</span><span class="chip">Nigerian Traditional</span><span class="scale">250</span></div></div><div class="year"><h3>2025</h3><span class="count">8 events listed</span></div><div class="log"><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--coral)"><span class="when">27 Dec</span><span class="what">December concert series</span><span class="where">Lekki, Lagos</span><span class="chip">Pan-African &amp; Afro Fusion</span><span class="scale">3,000+</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--cyan)"><span class="when">26 Dec</span><span class="what">Carnival week</span><span class="where">Calabar, Cross River</span><span class="chip">Carnival &amp; Parade</span><span class="scale">5,000+</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">25 Oct</span><span class="what">Company anniversary</span><span class="where">Ikeja, Lagos</span><span class="chip">Nigerian Traditional</span><span class="scale">800</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">13 Sep</span><span class="what">State cultural festival</span><span class="where">Kano</span><span class="chip">Nigerian Traditional</span><span class="scale">1,200</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">16 Aug</span><span class="what">New yam festival</span><span class="where">Enugu</span><span class="chip">Nigerian Traditional</span><span class="scale">900</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">05 Jul</span><span class="what">Traditional wedding</span><span class="where">Ibadan, Oyo</span><span class="chip">Nigerian Traditional</span><span class="scale">500</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--orchid)"><span class="when">17 May</span><span class="what">Industry awards night</span><span class="where">Victoria Island, Lagos</span><span class="chip">Contemporary</span><span class="scale">700</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--cyan)"><span class="when">08 Mar</span><span class="what">Women&#8217;s day reception</span><span class="where">Abuja</span><span class="chip">Carnival &amp; Parade</span><span class="scale">300</span></div></div><div class="year"><h3>2024</h3><span class="count">5 events listed</span></div><div class="log"><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">30 Nov</span><span class="what">Church anniversary</span><span class="where">Surulere, Lagos</span><span class="chip">Nigerian Traditional</span><span class="scale">600</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">19 Oct</span><span class="what">University cultural week</span><span class="where">Uyo, Akwa Ibom</span><span class="chip">Nigerian Traditional</span><span class="scale">1,000</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">24 Aug</span><span class="what">State cultural reception</span><span class="where">Makurdi, Benue</span><span class="chip">Nigerian Traditional</span><span class="scale">400</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--marigold)"><span class="when">08 Jun</span><span class="what">Traditional wedding</span><span class="where">Owerri, Imo</span><span class="chip">Nigerian Traditional</span><span class="scale">450</span></div><!-- To add an event, copy one of these rows and change the five fields. --><div class="log-row" style="--hue:var(--coral)"><span class="when">20 Apr</span><span class="what">Hotel opening</span><span class="where">Victoria Island, Lagos</span><span class="chip">Pan-African &amp; Afro Fusion</span><span class="scale">300</span></div></div>
     <p class="form-note" style="margin-top:2.4rem">Older bookings are archived. Ask if you&#8217;d like references from a particular kind of event.</p>
   </div>
 </section>
@@ -734,7 +796,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 <section class="band">
   <div class="wrap">
     <div>
-      <h2>Tell us the date and we&#8217;ll tell you what fits.</h2>
+      <h2>Tell us the date and the event type.</h2>
       <p>Send the venue, the time of day and the kind of crowd. You&#8217;ll get a reply with two or three options and a price the same day.</p>
     </div>
     <a class="btn btn--primary" href="contact.html">Check a date</a>

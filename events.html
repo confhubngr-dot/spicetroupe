@@ -3,8 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Packages &amp; prices &#8212; Spice Troupe</title>
-<meta name="description" content="Dance performances for traditional weddings, corporate events, festivals, cultural days and schools across Nigeria, with guide prices.">
+<title>Dance Group Prices &amp; Packages, Lagos | Spice Troupe</title>
+<meta name="description" content="Spice Troupe pricing: wedding, funeral, Nigerian multicultural and international displays, VIP welcomes and media production, from ₦2,000,000. Nine add-ons and full terms.">
+<link rel="canonical" href="https://www.spicetroupe.ng/events.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spice Troupe">
+<meta property="og:locale" content="en_NG">
+<meta property="og:title" content="Dance Group Prices &amp; Packages, Lagos | Spice Troupe">
+<meta property="og:description" content="Spice Troupe pricing: wedding, funeral, Nigerian multicultural and international displays, VIP welcomes and media production, from ₦2,000,000. Nine add-ons and full terms.">
+<meta property="og:url" content="https://www.spicetroupe.ng/events.html">
+<meta property="og:image" content="https://www.spicetroupe.ng/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dance Group Prices &amp; Packages, Lagos | Spice Troupe">
+<meta name="twitter:description" content="Spice Troupe pricing: wedding, funeral, Nigerian multicultural and international displays, VIP welcomes and media production, from ₦2,000,000. Nine add-ons and full terms.">
+<meta name="twitter:image" content="https://www.spicetroupe.ng/images/og-cover.jpg">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 20'%3E%3Cellipse cx='8' cy='6.5' rx='5.2' ry='6.5' fill='%23F2A413'/%3E%3Cellipse cx='8' cy='16.4' rx='3.6' ry='3.4' fill='%23E24A72'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,7 +175,7 @@ p:last-child{margin-bottom:0}
 /* video background. Falls back to the poster image, then to flat aubergine. */
 .hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hero-media video,.hero-media img{
-  width:100%;height:100%;object-fit:cover;object-position:center 35%;
+  width:100%;height:100%;object-fit:cover;object-position:center 32%;
   display:block;filter:saturate(1.05)
 }
 .hero-media::after{
@@ -268,28 +286,16 @@ p:last-child{margin-bottom:0}
 
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .gal figure{margin:0}
-.tile{
-  aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;
-  background:linear-gradient(150deg,var(--hue) 0%,var(--aubergine) 118%);
-  display:flex;align-items:flex-end;padding:22px;
-}
-.tile--wide{aspect-ratio:16/10}
-.tile span{font-family:var(--display);font-weight:800;font-size:1.15rem;color:#fff;
-  letter-spacing:-.02em;line-height:1.15;text-shadow:0 1px 14px rgba(0,0,0,.3)}
-.tile::after{
-  content:"Photo slot";position:absolute;top:14px;left:14px;font-family:var(--mono);
-  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);
-  border:1px solid rgba(255,255,255,.4);padding:3px 7px;border-radius:20px;
-}
-.gal figcaption{font-size:.88rem;color:var(--muted);margin-top:.7rem}
+.gal img{width:100%;height:auto;border-radius:var(--r);display:block;
+  background:var(--line);aspect-ratio:auto}
+.gal figcaption{font-size:.9rem;color:var(--muted);margin-top:.85rem;line-height:1.5}
+.gal figcaption b{display:block;font-family:var(--display);font-weight:700;font-size:1rem;
+  color:var(--aubergine);letter-spacing:-.012em;margin-bottom:.3rem}
 
 /* instagram embeds */
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
 .ig-grid .instagram-media{min-width:0!important;width:100%!important;margin:0!important;
   border-radius:var(--r)!important;border:1px solid var(--line)!important;box-shadow:none!important}
-.ig-empty{border:1px dashed var(--line);border-radius:var(--r);padding:26px;background:var(--paper)}
-.ig-empty p{font-size:.9rem;color:var(--muted)}
-.ig-empty .spec{display:block;margin-top:.8rem;word-break:break-all;color:var(--indigo)}
 @media (max-width:1000px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:720px){.ig-grid{grid-template-columns:1fr}}
 
@@ -377,47 +383,50 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted-dark)}
 
-/* ---------- package price breakdown ---------- */
+/* ---------- service blocks ---------- */
 
-.pkg{display:flex;flex-direction:column}
-.pkg .lineup{margin:0 0 1.2rem;padding:0;list-style:none;display:grid;gap:.34rem}
-
-/* what each option performs — the actual difference between the three */
-.perf{margin:0 0 1.3rem;padding:0;list-style:none;display:grid;gap:.6rem}
-.perf li{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;line-height:1.4}
-.perf li::before{
-  content:"";width:17px;height:17px;border-radius:50%;flex:none;margin-top:.14rem;
-  background:var(--hue);
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%23000'/%3E%3C/svg%3E") center/13px no-repeat,linear-gradient(#000,#000);
-  -webkit-mask-composite:xor;
-  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' fill='%23000'/%3E%3C/svg%3E") center/13px no-repeat,linear-gradient(#000,#000);
-  mask-composite:exclude;
+.service{
+  display:grid;grid-template-columns:.82fr 1.18fr;gap:44px;
+  padding:40px 0;border-top:1px solid var(--line);align-items:start;
 }
-.perf li strong{font-weight:700}
-.perf li em{font-style:normal;color:var(--muted);font-size:.89rem;display:block;margin-top:.1rem}
-.perf li.off{color:var(--muted);opacity:.55}
-.perf li.off::before{
-  background:var(--muted);
-  -webkit-mask:none;mask:none;
-  border-radius:50%;height:2px;width:11px;margin-top:.62rem;margin-left:3px;margin-right:3px;
+.on-dark .service{border-top-color:var(--line-dark)}
+.service:first-of-type{border-top:0;padding-top:0}
+
+.service-head h3{margin-bottom:.9rem;position:relative;padding-top:1.1rem}
+.service-head h3::before{content:"";position:absolute;top:0;left:0;width:52px;height:5px;
+  border-radius:3px;background:var(--hue)}
+.service-head p{font-size:.95rem;color:var(--muted);max-width:40ch}
+.on-dark .service-head p{color:var(--muted-dark)}
+
+.service-fee{
+  display:inline-flex;align-items:baseline;gap:.5rem;margin-top:1.1rem!important;
+  font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;
+  border:1px solid var(--line);border-radius:999px;padding:.5rem 1rem;color:var(--aubergine)!important;
 }
-.pkg .lineup li{font-size:.92rem;color:var(--muted);display:flex;gap:.55rem;align-items:baseline}
-.pkg .lineup li b{font-family:var(--mono);font-size:.8rem;color:var(--hue);font-weight:500;
-  min-width:1.6rem;flex:none}
+.on-dark .service-fee{border-color:var(--line-dark);color:var(--mist)!important}
+.service-fee b{font-family:var(--display);font-size:1.05rem;font-weight:800;letter-spacing:-.02em}
 
-.price-lines{margin:auto 0 0;padding-top:1.1rem;border-top:1px solid var(--line)}
-.price-line{display:flex;justify-content:space-between;gap:1rem;padding:.34rem 0;font-size:.93rem}
-.price-line span:first-child{color:var(--muted)}
-.price-line span:last-child{font-family:var(--mono);font-size:.86rem;white-space:nowrap}
-.price-line--total{margin-top:.5rem;padding-top:.7rem;border-top:1px solid var(--line);
-  font-weight:700}
-.price-line--total span:first-child{color:var(--aubergine)}
-.price-line--total span:last-child{font-family:var(--display);font-size:1.15rem;font-weight:800;
-  letter-spacing:-.02em}
+.service-items{margin:0;display:grid;gap:1.15rem}
+.service-items>div{display:grid;gap:.28rem}
+.service-items dt{font-family:var(--display);font-weight:700;font-size:1.02rem;
+  letter-spacing:-.012em;display:flex;flex-wrap:wrap;align-items:baseline;gap:.7rem}
+.service-items dt span{font-family:var(--mono);font-size:.76rem;font-weight:400;color:var(--hue);
+  letter-spacing:.03em}
+.service-items dd{margin:0;font-size:.94rem;color:var(--muted);max-width:66ch;line-height:1.55}
+.on-dark .service-items dd{color:var(--muted-dark)}
 
-.pkg-for{font-size:.86rem;color:var(--muted);font-style:italic;margin:-.4rem 0 1.2rem}
-.pkg-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 .6rem;padding-top:1rem;border-top:1px solid var(--line)}
+.service-chips{display:flex;flex-wrap:wrap;gap:9px;margin:0;padding:0;list-style:none}
+.service-chips li{font-size:.93rem;font-weight:500;border:1px solid var(--line);
+  border-radius:999px;padding:.45rem 1rem;background:var(--paper)}
+.on-dark .service-chips li{border-color:var(--line-dark);background:rgba(255,255,255,.05)}
+
+.service-note{margin-top:1.4rem!important;font-size:.9rem;color:var(--muted);
+  padding-left:16px;border-left:3px solid var(--hue)}
+.on-dark .service-note{color:var(--muted-dark)}
+
+@media (max-width:1000px){
+  .service{grid-template-columns:1fr;gap:24px;padding:34px 0}
+}
 
 /* ---------- terms ---------- */
 
@@ -637,6 +646,78 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 @media print{.masthead,.band,.foot{display:none}}
 
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["PerformingGroup", "LocalBusiness"],
+      "@id": "https://www.spicetroupe.ng/#organisation",
+      "name": "Spice Troupe",
+      "alternateName": "Spice Troupe Cultural Dance Group",
+      "description": "A premier cultural and contemporary dance company with resident performers in Lagos and Abuja, performing traditional African, Pan-African, carnival and global cultural productions across Nigeria and worldwide.",
+      "url": "https://www.spicetroupe.ng/",
+      "logo": "https://www.spicetroupe.ng/images/og-cover.jpg",
+      "image": "https://www.spicetroupe.ng/images/og-cover.jpg",
+      "telephone": "+2348138067502",
+      "email": "hello@spicetroupe.ng",
+      "priceRange": "₦2,000,000+",
+      "currenciesAccepted": "NGN",
+      "address": [
+        { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
+        { "@type": "PostalAddress", "addressLocality": "Abuja", "addressCountry": "NG" }
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "Nigeria" },
+        { "@type": "City", "name": "Lagos" },
+        { "@type": "City", "name": "Abuja" }
+      ],
+      "sameAs": ["https://www.instagram.com/spicetroupe/"],
+      "knowsAbout": [
+        "Nigerian traditional dance", "Traditional African dance", "Bàtá", "Atilogwu", "Ekombi", "Swange",
+        "Koroso", "Carnival and parade performance", "Afro fusion dance",
+        "Theatrical and flag choreography"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "name": "Wedding Entertainment", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Nigerian Multicultural Displays", "price": "2500000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Funeral Entertainment", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Special Welcome Experiences — Airport Welcome", "price": "1000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Special Welcome Experiences — VIP Cultural Welcome", "price": "2000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "International Displays", "price": "5000000", "priceCurrency": "NGN" },
+        { "@type": "Offer", "name": "Media Production", "price": "5000000", "priceCurrency": "NGN" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.spicetroupe.ng/#website",
+      "url": "https://www.spicetroupe.ng/",
+      "name": "Spice Troupe",
+      "publisher": { "@id": "https://www.spicetroupe.ng/#organisation" },
+      "inLanguage": "en-NG"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How far in advance should we book a dance group?",
+     "acceptedAnswer":{"@type":"Answer","text":"December and the carnival season fill up by August. The rest of the year, three to six weeks is usually enough. A 70% deposit locks in current rates for dates booked months ahead."}},
+    {"@type":"Question","name":"How do we secure the date?",
+     "acceptedAnswer":{"@type":"Answer","text":"Payment confirms the reservation. Until payment reaches us, the date stays open to other enquiries."}},
+    {"@type":"Question","name":"Do you travel outside Lagos and Abuja?",
+     "acceptedAnswer":{"@type":"Answer","text":"Yes, anywhere in Nigeria and internationally. Out-of-state bookings carry a welfare fee, and flights and hotels are arranged by Spice Troupe with costs borne by the client and itemised in the quote."}},
+    {"@type":"Question","name":"What is not included in the base fee?",
+     "acceptedAnswer":{"@type":"Answer","text":"Costumes and logistics. Both are calculated once the venue, scale and date are confirmed, then added to the final invoice. Special costumes and props requested for a particular theme are charged separately."}},
+    {"@type":"Question","name":"Do you need a stage?",
+     "acceptedAnswer":{"@type":"Answer","text":"No. A cleared floor of 5m by 4m is enough for most sets. Send the dimensions or a photo and we will say what fits."}},
+    {"@type":"Question","name":"Can we choose the music?",
+     "acceptedAnswer":{"@type":"Answer","text":"Yes, within reason. Send tracks at least three weeks ahead so the choreography can be rebuilt around them. Traditional sets have their own music and live drumming."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -645,7 +726,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
   <div class="wrap">
     <a class="logo" href="index.html">
       <svg viewBox="0 0 16 20" aria-hidden="true"><ellipse cx="8" cy="6.5" rx="5.2" ry="6.5" fill="#F2A413"/><ellipse cx="8" cy="16.4" rx="3.6" ry="3.4" fill="#E24A72"/></svg>
-      <span>Spice Troupe<small>Cultural dance group &#183; Lagos &amp; Abuja</small></span>
+      <span>Spice Troupe<small>Cultural &amp; Contemporary Dance Group</small></span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Main">
@@ -666,37 +747,34 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 <section class="section section--dark on-dark section--tight">
   <div class="wrap">
     <p class="eyebrow">Where we perform</p>
-    <h1 style="font-size:clamp(2.4rem,5.5vw,4rem)">Packages &amp; event types</h1>
-    <p class="lede" style="margin-top:1.4rem">The same dancers, arranged differently depending on whether the room is seated, standing, indoors, outdoors or moving.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Event types</p>
-      <h2>Six kinds of day we know well.</h2>
-    </div>
-    <div class="grid grid--3">
-      <article class="card rise"><h3>Traditional weddings</h3><p>An entrance for the couple, a set matched to both families&#8217; traditions, and a section that brings guests onto the floor. We work with your planner directly on timings.</p></article>
-      <article class="card rise"><h3>White weddings &amp; receptions</h3><p>A shorter, tighter set after the meal, then a first dance if you&#8217;ve commissioned one. Fits venues where the floor is smaller than the guest list suggests.</p></article>
-      <article class="card rise"><h3>Corporate &amp; product launches</h3><p>Opening numbers, interval sets and stage-managed entrances. We liaise with your AV supplier and can supply a technical rider.</p></article>
-      <article class="card rise"><h3>Festivals &amp; carnivals</h3><p>Repeat sets across a day, outdoor stages and parade routes. Priced by the day rather than by the set.</p></article>
-      <article class="card rise"><h3>Cultural days &amp; receptions</h3><p>State cultural events, embassy evenings, association galas and diaspora functions. Tell us which traditions the room will want to see and we&#8217;ll build to that.</p></article>
-      <article class="card rise"><h3>Schools &amp; youth programmes</h3><p>Assembly performances and workshops for up to 60 pupils at a time, with a scheme of work you can keep.</p></article>
-    </div>
+    <h1 style="font-size:clamp(2.4rem,5.5vw,4rem)">Services &amp; pricing</h1>
+    <p class="lede" style="margin-top:1.4rem">Six service lines, from a wedding entrance to a stage of cultures from around the globe. Every production is built to your event rather than pulled off a shelf.</p>
   </div>
 </section>
 
 <section class="section section--dark on-dark">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Nigerian multi-cultural display</p>
-      <h2>Three options.</h2>
-      <p class="lede" style="margin-top:1.2rem">The difference between the three is what gets performed. Option 1 is the guest welcome dance on its own; Options 2 and 3 add a main performance, either one tribe or the unity dance.</p><p style="color:var(--muted-dark);margin-top:1rem">Each is quoted as artiste fee, costumes and logistics, so you can see what you are paying for. Logistics shown are the standard central-area rate &#8212; venues outside that are calculated once the location is confirmed.</p>
+      <p class="eyebrow">Services</p>
+      <h2>Six things we are booked for.</h2>
+      <p class="lede" style="margin-top:1.2rem">Each carries a base fee covering the performance itself. Costumes and logistics are added to the final invoice once the venue, scale and date are confirmed &#8212; so the number you see is the number the production starts from, not a headline that grows quietly.</p>
     </div>
-    <div class="grid grid--3">
-      <article class="card card--style pkg rise" style="--hue:var(--marigold)"><p class="origin" style="--hue:var(--marigold)">Option 01</p><h3>Guest welcome</h3><p class="pkg-for">Most subscribed for product launches and cocktail events</p><ul class="perf"><li><span><strong>Guest welcome dance</strong></span></li><li class="off"><span><strong>Main performance</strong><em>Not included in this option</em></span></li></ul><p class="pkg-label">Line-up</p><ul class="lineup"><li><b>5</b>female dancers</li><li><b>5</b>male dancers</li><li><b>4</b>drummers</li></ul><div class="price-lines"><div class="price-line"><span>Artiste fee</span><span>&#8358;2,500,000</span></div><div class="price-line"><span>Costumes</span><span>&#8358;400,000</span></div><div class="price-line"><span>Logistics (central areas)</span><span>&#8358;300,000</span></div><div class="price-line price-line--total"><span>Total</span><span>&#8358;3,200,000</span></div></div></article><article class="card card--style pkg rise" style="--hue:var(--coral)"><p class="origin" style="--hue:var(--coral)">Option 02</p><h3>Guest welcome + one tribe</h3><p class="pkg-for">Most subscribed for EYP</p><ul class="perf"><li><span><strong>Guest welcome dance</strong></span></li><li><span><strong>Main performance</strong><em>One tribe</em></span></li></ul><p class="pkg-label">Line-up</p><ul class="lineup"><li><b>4</b>female dancers</li><li><b>4</b>male dancers</li><li><b>1</b>Oja player</li><li><b>1</b>Kakaki player</li><li><b>1</b>singer</li><li><b>4</b>drummers</li></ul><div class="price-lines"><div class="price-line"><span>Artiste fee</span><span>&#8358;3,500,000</span></div><div class="price-line"><span>Costumes</span><span>&#8358;500,000</span></div><div class="price-line"><span>Logistics (central areas)</span><span>&#8358;300,000</span></div><div class="price-line price-line--total"><span>Total</span><span>&#8358;4,300,000</span></div></div></article><article class="card card--style pkg rise" style="--hue:var(--cyan)"><p class="origin" style="--hue:var(--cyan)">Option 03</p><h3>Guest welcome + unity dance</h3><p class="pkg-for">Most subscribed for galas and award ceremonies</p><ul class="perf"><li><span><strong>Guest welcome dance</strong></span></li><li><span><strong>Main performance</strong><em>Unity dance</em></span></li></ul><p class="pkg-label">Line-up</p><ul class="lineup"><li><b>5</b>female dancers</li><li><b>5</b>male dancers</li><li><b>1</b>chanter</li><li><b>1</b>Oja player</li><li><b>1</b>Kakaki player</li><li><b>4</b>drummers</li></ul><div class="price-lines"><div class="price-line"><span>Artiste fee</span><span>&#8358;4,000,000</span></div><div class="price-line"><span>Costumes</span><span>&#8358;500,000</span></div><div class="price-line"><span>Logistics (central areas)</span><span>&#8358;350,000</span></div><div class="price-line price-line--total"><span>Total</span><span>&#8358;4,850,000</span></div></div></article>
+    <article class="service rise" id="weddings" style="--hue:var(--marigold)"><div class="service-head"><h3>Wedding Entertainment</h3><p>From the first guest arriving to the last dance of the night.</p><p class="service-fee">Base fee <b>&#8358;2,000,000</b></p></div><div><dl class="service-items"><div><dt>Guest Welcome Performance</dt><dd>A vibrant cultural welcome featuring dancers, drummers and traditional entertainers to create an unforgettable first impression for your guests.</dd></div><div><dt>Bridal Procession</dt><dd>A graceful and elegant cultural procession designed to celebrate the bride&#8217;s grand entrance with beauty and tradition.</dd></div><div><dt>Groom&#8217;s Grand Entrance</dt><dd>A high-energy, customised performance that celebrates the groom with vibrant music, dance and cultural flair.</dd></div><div><dt>Traditional Chants &amp; Eulogies</dt><dd>Authentic praise chants, royal salutations and cultural eulogies that honour the couple, their families and their heritage.</dd></div><div><dt>Main Cultural Dance Performance</dt><dd>A spectacular showcase of traditional and contemporary cultural dances, professionally choreographed to captivate and entertain.</dd></div><div><dt>Intertribal Wedding Performance</dt><dd>A bespoke production celebrating the union of two families by blending their cultures, traditions, music and dances into one unforgettable performance.</dd></div><div><dt>After-Party Entertainment</dt><dd>An energetic Afro-fusion performance and interactive dance experience that keeps the celebration alive and creates the perfect transition into the party.</dd></div></dl></div></article><article class="service rise" id="nigerian" style="--hue:var(--coral)"><div class="service-head"><h3>Nigerian Multicultural Displays</h3><p>One tribe, a unity dance, or the whole country on one stage.</p><p class="service-fee">Base fee <b>&#8358;2,500,000</b></p></div><div><dl class="service-items"><div><dt>Guest Welcome Performance</dt><dd>A vibrant cultural reception featuring traditional dancers, drummers, flag bearers and entertainers representing Nigeria&#8217;s rich cultural heritage.</dd></div><div><dt>Main Performance &#8212; Single Tribe</dt><dd>An authentic showcase of the music, dance, costumes and traditions of one Nigerian ethnic group, professionally choreographed.</dd></div><div><dt>Main Performance &#8212; Unity Dance</dt><dd>A powerful production celebrating Nigeria&#8217;s unity through a seamless fusion of music, dance and traditions from different ethnic groups, symbolising peace, diversity and national pride.</dd></div><div><dt>Main Performance &#8212; Multiple Tribes</dt><dd>A spectacular showcase featuring performances from multiple Nigerian ethnic groups, highlighting the country&#8217;s diverse traditions, costumes, music and dance styles in one production.</dd></div><div><dt>Guest Immersion Experience</dt><dd>An interactive experience where performers engage guests through dance, drumming, storytelling and audience participation, creating a deeper appreciation of Nigeria&#8217;s heritage.</dd></div></dl></div></article><article class="service rise" id="international" style="--hue:var(--cyan)"><div class="service-head"><h3>International Displays</h3><p>Cultures from around the globe, curated to your theme.</p><p class="service-fee">Base fee from <b>&#8358;5,000,000</b></p></div><div><dl class="service-items"><div><dt>Dance Showcase</dt><dd>A vibrant cultural performance celebrating the music, dance, costumes and traditions of countries from around the world.</dd></div><div><dt>Opening Performance &#8212; 2&#8211;3 Cultures</dt><dd>A bespoke opening act featuring two to three international cultures, creating a spectacular start to your event.</dd></div><div><dt>Drums Ensemble &#8212; The Rhythm of Africa</dt><dd>A powerful live percussion production showcasing the energy, heritage and heartbeat of Africa through traditional drumming and rhythm.</dd></div><div><dt>The World on One Stage</dt><dd>Our signature theatrical production featuring curated cultures from across the globe, with authentic costumes, national flags, live music and captivating choreography, tailored to your theme.</dd></div><div><dt>Premium Fusion Dance Showcase</dt><dd>A world-class production blending international cultures, contemporary choreography, theatrical storytelling and breathtaking visual elements.</dd></div><div><dt>Interactive Guest Immersion</dt><dd>An engaging experience where performers interact with guests through dance, music, storytelling and audience participation, celebrating global diversity.</dd></div></dl><p class="service-note">Final pricing is determined by the creative scope, the number of cultures represented, performers, costumes, props, customisation and logistics.</p></div></article><article class="service rise" id="welcome" style="--hue:var(--violet)"><div class="service-head"><h3>Special Welcome Experiences</h3><p>For VIPs, dignitaries, celebrities and long-awaited arrivals.</p></div><div><dl class="service-items"><div><dt>Airport Welcome / Surprise Reception<span>From &#8358;1,000,000</span></dt><dd>Create an unforgettable arrival with vibrant cultural dancers, drummers, flag bearers, traditional chants and a customised welcome experience for VIPs, dignitaries, celebrities or loved ones.</dd></div><div><dt>VIP Cultural Welcome<span>From &#8358;2,000,000</span></dt><dd>A premium red-carpet cultural reception featuring an elite ensemble of dancers, live drummers, flag bearers, traditional performers and bespoke choreography, tailored for high-profile guests, corporate executives, government officials and distinguished visitors.</dd></div></dl></div></article><article class="service rise" id="funeral" style="--hue:var(--jade)"><div class="service-head"><h3>Funeral Entertainment</h3><p>A dignified send-off that honours a life and a lineage.</p><p class="service-fee">Base fee <b>&#8358;2,000,000</b></p></div><div><dl class="service-items"><div><dt>Guest Welcome Performance</dt><dd>A respectful cultural welcome featuring traditional drummers, singers and performers to receive family, friends and dignitaries while setting a dignified tone for the ceremony.</dd></div><div><dt>Eulogies &amp; Family Entrance</dt><dd>A solemn cultural procession accompanying the children and immediate family with traditional chants, praise renditions, drumming or live cultural music in honour of the departed.</dd></div><div><dt>Main Cultural Performance</dt><dd>A heartfelt performance celebrating the life, legacy, culture and achievements of the deceased through carefully choreographed traditional dance, music, storytelling and cultural expressions.</dd></div></dl></div></article><article class="service rise" id="media" style="--hue:var(--indigo)"><div class="service-head"><h3>Media Production</h3><p>Performance built for the camera rather than the room.</p><p class="service-fee">Base production fee from <b>&#8358;5,000,000</b></p></div><div><ul class="service-chips"><li>Brand Commercial</li><li>Video Shoots</li><li>Documentary</li><li>Feature Film</li><li>Short Film</li></ul></div></article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split split--narrow">
+      <div>
+        <p class="eyebrow">Custom productions</p>
+        <h2>Every event is different.</h2>
+      </div>
+      <div class="prose">
+        <p>We design and produce fully customised cultural entertainment tailored to your vision, theme, audience and objectives. Whether you want specific countries, whole continents, or a creative concept nobody has staged before, we will curate a bespoke production around it.</p>
+        <p style="color:var(--muted)">Base production fee from &#8358;5,000,000. Final pricing depends on creative scope, the number of cultures represented, performers, costumes, props, customisation and logistics.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="contact.html">Describe your event</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -706,10 +784,10 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
     <div class="section-head">
       <p class="eyebrow">Add-ons</p>
       <h2>Build the production up.</h2>
-      <p class="lede" style="margin-top:1.2rem">Added to any of the three options. Where a figure is marked as a base fee, the final price depends on the scale of the booking and the venue.</p>
+      <p class="lede" style="margin-top:1.2rem">Added to any service above. Each figure is a starting fee &#8212; the final price depends on scale and specific requirements.</p>
     </div>
     <div class="addons">
-      <div class="addon"><div><h4>Ogene</h4></div><span class="addon-price">&#8358;1,000,000</span></div><div class="addon"><div><h4>Drums ensemble</h4></div><span class="addon-price">&#8358;2,000,000</span></div><div class="addon"><div><h4>Decorated show horse</h4><p>Base fee &#8212; final price depends on scale and venue</p></div><span class="addon-price">&#8358;1,500,000</span></div><div class="addon"><div><h4>Aerialist</h4><p>Base fee &#8212; final price depends on scale and venue</p></div><span class="addon-price">&#8358;700,000</span></div><div class="addon"><div><h4>Magician</h4><p>Base fee &#8212; final price depends on scale and venue</p></div><span class="addon-price">&#8358;600,000</span></div><div class="addon"><div><h4>Stilt walkers</h4><p>Base fee &#8212; final price depends on scale and venue</p></div><span class="addon-price">&#8358;300,000</span></div><div class="addon"><div><h4>Fire breather</h4><p>Base fee &#8212; final price depends on scale and venue</p></div><span class="addon-price">&#8358;200,000</span></div><div class="addon"><div><h4>After party</h4><p>Base fee &#8212; final price depends on scale and venue</p></div><span class="addon-price">&#8358;1,500,000</span></div><div class="addon"><div><h4>Carnival</h4><p>Base fee &#8212; final price depends on scale and venue</p></div><span class="addon-price">&#8358;3,500,000</span></div>
+      <div class="addon"><div><h4>Ogene Ensemble</h4></div><span class="addon-price">From &#8358;1,000,000</span></div><div class="addon"><div><h4>Agidigbo Drums Ensemble</h4></div><span class="addon-price">From &#8358;2,000,000</span></div><div class="addon"><div><h4>Decorated Show Horse</h4></div><span class="addon-price">From &#8358;1,500,000</span></div><div class="addon"><div><h4>Carnival Experience</h4></div><span class="addon-price">From &#8358;3,500,000</span></div><div class="addon"><div><h4>After-Party Entertainment</h4></div><span class="addon-price">From &#8358;1,500,000</span></div><div class="addon"><div><h4>Magician</h4></div><span class="addon-price">From &#8358;600,000</span></div><div class="addon"><div><h4>Aerialist Performance</h4></div><span class="addon-price">From &#8358;600,000</span></div><div class="addon"><div><h4>Stilt Walkers</h4></div><span class="addon-price">From &#8358;200,000</span></div><div class="addon"><div><h4>Fire Breather Performance</h4></div><span class="addon-price">From &#8358;200,000</span></div>
     </div>
   </div>
 </section>
@@ -723,7 +801,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
         <p style="color:var(--muted-dark);margin-top:1.1rem">Worth reading before you confirm. Nothing here appears later as a surprise.</p>
       </div>
       <div>
-        <ol class="terms"><li>All prices are quoted in Nigerian Naira. For international clients, a USD equivalent can be provided at the prevailing exchange rate at the time the quotation is issued.</li><li>Requests for special costumes and props attract additional charges.</li><li>Only payment confirms and secures your event date reservation.</li><li>For events scheduled several months ahead, prices are subject to review based on prevailing economic conditions. Payment of a 70% deposit locks in current rates for your date.</li><li>Standard logistics rates apply to events within the central area. Outside it, the applicable logistics fee is calculated and reflected on your final invoice once the venue is confirmed.</li><li>A welfare fee applies to all out-of-state bookings.</li><li>Where flights and accommodation are required, Spice Troupe arranges all travel and hotel bookings to maintain our service standards. Related travel and accommodation costs are borne by the client.</li></ol>
+        <ol class="terms"><li>All prices are quoted in Nigerian Naira. For international clients, a USD equivalent can be provided at the prevailing exchange rate at the time the quotation is issued.</li><li>Costumes and logistics are added to the final invoice, calculated once the venue, scale and date are confirmed.</li><li>A welfare fee applies to all bookings outside Lagos and Abuja.</li><li>Where flights and accommodation are required, Spice Troupe arranges all travel and hotel bookings to maintain our service standards. Related costs are borne by the client.</li><li>Requests for special costumes and props attract additional charges.</li><li>Only payment confirms and secures your event date reservation.</li><li>For events scheduled several months ahead, prices are subject to review based on prevailing economic conditions. Payment of 70% deposit locks in current rates for your date.</li></ol>
       </div>
     </div>
   </div>
@@ -735,7 +813,8 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
     <details><summary>How far in advance should we book?</summary><p>December and the carnival season fill up by August. The rest of the year, three to six weeks is usually enough. Booking several months ahead is welcome &#8212; a 70% deposit locks in current rates, which protects you if prices are reviewed before your date.</p></details>
     <details><summary>How do we secure the date?</summary><p>Payment confirms the reservation. Until payment reaches us, the date stays open to other enquiries, however far the conversation has gone.</p></details>
     <details><summary>What happens if it rains?</summary><p>Outdoor sets need a dry, level surface. If it&#8217;s wet we move indoors or shorten to the styles that are safe on what&#8217;s available &#8212; we won&#8217;t cancel on you, and we won&#8217;t dance on a floor where someone will get hurt.</p></details>
-    <details><summary>Do you travel outside Lagos and Abuja?</summary><p>Yes, anywhere in the country and internationally. Out-of-state bookings carry a welfare fee, and where flights and hotels are needed we arrange them ourselves so the coordination holds together &#8212; those costs are borne by the client and itemised in the quote.</p></details>
+    <details><summary>Do you travel outside Lagos and Abuja?</summary><p>Yes, anywhere in the country and internationally. Bookings outside Lagos and Abuja carry a welfare fee, and where flights and hotels are needed we arrange them ourselves so the coordination holds together &#8212; those costs are borne by the client and itemised in the quote.</p></details>
+    <details><summary>What is not included in the base fee?</summary><p>Costumes and logistics. Both are calculated once the venue, scale and date are confirmed, then added to the final invoice. Special costumes and props requested for a particular theme are charged separately again.</p></details>
     <details><summary>Do you need a stage?</summary><p>No. A cleared floor of 5m &#215; 4m is enough for most sets. Send the dimensions or a photo and we&#8217;ll tell you honestly what fits.</p></details>
     <details><summary>Can we choose the music?</summary><p>Yes, within reason. Send tracks at least three weeks ahead so the choreography can be rebuilt around them. The traditional sets have their own music and drumming, which we won&#8217;t swap for a recording.</p></details>
   </div>
@@ -746,7 +825,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--paper);border:1px 
 <section class="band">
   <div class="wrap">
     <div>
-      <h2>Tell us the date and we&#8217;ll tell you what fits.</h2>
+      <h2>Tell us the date and the event type.</h2>
       <p>Send the venue, the time of day and the kind of crowd. You&#8217;ll get a reply with two or three options and a price the same day.</p>
     </div>
     <a class="btn btn--primary" href="contact.html">Check a date</a>
